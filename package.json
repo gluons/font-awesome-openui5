@@ -1,0 +1,43 @@
+{
+  "name": "font-awesome-openui5",
+  "version": "1.0.0",
+  "description": "Font Awesome icons for OpenUI5",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/font-awesome-openui5.git"
+  },
+  "keywords": [
+    "font-awesome",
+    "font awesome",
+    "openui5"
+  ],
+  "author": {
+    "name": "Gluons",
+    "email": "sarunta@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/font-awesome-openui5/issues"
+  },
+  "homepage": "https://github.com/gluons/font-awesome-openui5#readme",
+  "private": true,
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "mocha": "^2.4.5",
+    "q": "^1.4.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "font-awesome-icon-chars": "^1.0.2"
+  }
+}
