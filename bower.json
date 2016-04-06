@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "openui5-sap.ui.core": "openui5/packaged-sap.ui.core#^1.36.5",
-    "jquery": "^2.2.2"
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
   }
 }

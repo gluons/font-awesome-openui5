@@ -1,15 +1,16 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
 var plumber = require('gulp-plumber');
-var uglify = require('gulp-uglify');
+var buffer = require('gulp-buffer');
 var rename = require('gulp-rename');
+var tap = require('gulp-tap');
+var coffee = require('gulp-coffee');
+var uglify = require('gulp-uglify');
 
 var Q = require('q');
 var del = require('del');
 
 var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
 
 gulp.task('clean', function () {
 	var deferred = Q.defer();
@@ -21,58 +22,42 @@ gulp.task('clean', function () {
 	return deferred.promise;
 });
 
-gulp.task('build:main', ['clean'], function () {
-	var b = browserify({
-		entries: 'src/font-awesome-openui5.js'
-	});
-	b.external('font-awesome-icon-chars');
-
-	return b.bundle()
-		.pipe(source('font-awesome-openui5.js'))
-		.pipe(plumber())
-		.pipe(buffer())
-		.pipe(uglify())
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(gulp.dest('dist'));
-});
-
-gulp.task('build:external', ['clean'], function () {
-	var b = browserify();
-	b.require('font-awesome-icon-chars');
-
-	return b.bundle()
-		.pipe(source('font-awesome-icon-chars.js'))
-		.pipe(plumber())
-		.pipe(buffer())
-		.pipe(uglify())
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(gulp.dest('dist/modules'));
-});
-
 gulp.task('build:bundle', ['clean'], function () {
-	var b = browserify({
-		entries: 'src/font-awesome-openui5.js'
-	});
-
-	return b.bundle()
-		.pipe(source('font-awesome-openui5.js'))
+	return gulp.src('src/*.bundle.coffee', { read: false })
 		.pipe(plumber())
+		.pipe(tap(function (file) {
+			file.contents = browserify(file.path, { transform: 'coffeeify' }).bundle();
+		}))
 		.pipe(buffer())
+		.pipe(rename({
+			extname: '.js'
+		}))
+		.pipe(gulp.dest('dist'))
 		.pipe(uglify())
 		.pipe(rename({
-			suffix: '.bundle.min'
+			suffix: '.min'
 		}))
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', ['build:main', 'build:external', 'build:bundle']);
+gulp.task('build:core', ['clean'], function () {
+	return gulp.src(['src/*.coffee', '!src/*.bundle.coffee'])
+		.pipe(plumber())
+		.pipe(coffee({
+			bare: true
+		}))
+		.pipe(gulp.dest('dist'))
+		.pipe(uglify())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['build:bundle', 'build:core']);
 
 gulp.task('watch', ['build'], function () {
-	watch('src/*.js', () => {
+	watch('src/*.coffee', () => {
 		gulp.start('build');
 	});
 });
