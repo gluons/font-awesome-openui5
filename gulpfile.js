@@ -12,6 +12,8 @@ var del = require('del');
 
 var browserify = require('browserify');
 
+var KarmaServer = require('karma').Server;
+
 gulp.task('clean', function () {
 	var deferred = Q.defer();
 
@@ -55,6 +57,22 @@ gulp.task('build:core', ['clean'], function () {
 });
 
 gulp.task('build', ['build:bundle', 'build:core']);
+
+gulp.task('test', function () {
+	new KarmaServer({
+		configFile: __dirname + '/karma.conf.js',
+		singleRun: true
+	}, function (exitCode) {
+		console.log(exitCode);
+	}).start();
+	new KarmaServer({
+		configFile: __dirname + '/karma.bundle.conf.js',
+		singleRun: true
+	}, function (exitCode) {
+		console.log(exitCode);
+		process.exit(exitCode);
+	}).start();
+});
 
 gulp.task('watch', ['build'], function () {
 	watch('src/*.coffee', () => {
