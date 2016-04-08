@@ -8,8 +8,8 @@ Provides [Font Awesome](http://fontawesome.io/) icons for using in [OpenUI5](htt
 Using `dist/font-awesome-openui5.min.js` or `dist/font-awesome-openui5.js` file.
 
 **API:**
- - [FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)]()
- - [FontAwesomeOpenUI5.loadIcons(iconFilePath)]()
+ - [FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)](#fontawesomeopenui5importfonticonsource-sourceproperties)
+ - [FontAwesomeOpenUI5.loadIcons(iconFilePath)](#fontawesomeopenui5loadiconsiconfilepath)
 
 #### FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)
 Import icons with icon source object.
