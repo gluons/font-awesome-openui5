@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var tap = require('gulp-tap');
 var coffee = require('gulp-coffee');
 var uglify = require('gulp-uglify');
+var header = require('gulp-header');
 
 var Q = require('q');
 var del = require('del');
@@ -14,14 +15,16 @@ var browserify = require('browserify');
 
 var KarmaServer = require('karma').Server;
 
+var headerComment = `/*
+Font Awesome icons for OpenUI5
+
+The MIT License (MIT)
+Copyright (c) 2016 Saran Tanpituckpong
+*/
+`;
+
 gulp.task('clean', function () {
-	var deferred = Q.defer();
-
-	del(['dist/*']).then(() => {
-		deferred.resolve();
-	});
-
-	return deferred.promise;
+	return del(['dist/*']);
 });
 
 gulp.task('build:bundle', ['clean'], function () {
@@ -31,11 +34,13 @@ gulp.task('build:bundle', ['clean'], function () {
 			file.contents = browserify(file.path, { transform: 'coffeeify' }).bundle();
 		}))
 		.pipe(buffer())
+		.pipe(header(headerComment))
 		.pipe(rename({
 			extname: '.js'
 		}))
 		.pipe(gulp.dest('dist'))
 		.pipe(uglify())
+		.pipe(header(headerComment))
 		.pipe(rename({
 			suffix: '.min'
 		}))
@@ -48,8 +53,10 @@ gulp.task('build:core', ['clean'], function () {
 		.pipe(coffee({
 			bare: true
 		}))
+		.pipe(header(headerComment))
 		.pipe(gulp.dest('dist'))
 		.pipe(uglify())
+		.pipe(header(headerComment))
 		.pipe(rename({
 			suffix: '.min'
 		}))
@@ -58,20 +65,40 @@ gulp.task('build:core', ['clean'], function () {
 
 gulp.task('build', ['build:bundle', 'build:core']);
 
-gulp.task('test', function () {
-	new KarmaServer({
-		configFile: __dirname + '/karma.conf.js',
-		singleRun: true
-	}, function (exitCode) {
-		console.log(exitCode);
-	}).start();
-	new KarmaServer({
-		configFile: __dirname + '/karma.bundle.conf.js',
-		singleRun: true
-	}, function (exitCode) {
-		console.log(exitCode);
-		process.exit(exitCode);
-	}).start();
+/*
+	Run tests in queue.
+	1. Core test
+	2. Bundle test
+*/
+gulp.task('test', ['build'], function () {
+	return (function () {
+		var deferred = Q.defer();
+
+		new KarmaServer({
+			configFile: __dirname + '/karma.conf.js',
+			singleRun: true
+		}, function (exitCode) {
+			deferred.resolve(exitCode);
+		}).start();
+
+		return deferred.promise;
+	})().then(function (exitCode) {
+		var deferred = Q.defer();
+
+		if (exitCode == 0) {
+			new KarmaServer({
+				configFile: __dirname + '/karma.bundle.conf.js',
+				singleRun: true
+			}, function (exitCode2) {
+				process.exit(exitCode2);
+				deferred.resolve(exitCode2);
+			}).start();
+		} else {
+			process.exit(exitCode);
+		}
+
+		return deferred.promise;
+	});
 });
 
 gulp.task('watch', ['build'], function () {

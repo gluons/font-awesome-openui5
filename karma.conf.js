@@ -15,7 +15,7 @@ module.exports = function (config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'bower_components/font-awesome-icon-chars/character-list/character-list.json',
+			{ pattern: 'bower_components/font-awesome-icon-chars/character-list/character-list.json', included: false, served: true },
 			'https://openui5.hana.ondemand.com/resources/sap-ui-core.js',
 			'src/font-awesome-openui5.coffee',
 			'test/test.coffee'
@@ -29,8 +29,7 @@ module.exports = function (config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'**/*.coffee': ['coffee'],
-			'**/*.json': ['json_fixtures']
+			'**/*.coffee': ['coffee']
 		},
 
 
@@ -81,11 +80,6 @@ module.exports = function (config) {
 			options: {
 				bare: true
 			}
-		},
-
-		jsonFixturesPreprocessor: {
-			stripPrefix: 'bower_components/font-awesome-icon-chars/character-list/',
-			prependPrefix: 'font-awesome-icon-chars/'
 		}
 	});
 };

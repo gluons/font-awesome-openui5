@@ -1,6 +1,6 @@
 if jQuery != undefined and jQuery.sap != undefined
   jQuery.sap.require 'sap.ui.core.IconPool'
-  
+
   faIconChars = require 'font-awesome-icon-chars'
 
   icons = faIconChars().icons
