@@ -1,5 +1,5 @@
 # Font Awesome icons for OpenUI5
-[![Travis](https://img.shields.io/travis/gluons/font-awesome-openui5.svg)](https://travis-ci.org/gluons/font-awesome-openui5)
+[![Travis](https://img.shields.io/travis/gluons/font-awesome-openui5.svg?style=flat-square)](https://travis-ci.org/gluons/font-awesome-openui5)
 
 Provides [Font Awesome](http://fontawesome.io/) icons for using in [OpenUI5](http://openui5.org/).
 
