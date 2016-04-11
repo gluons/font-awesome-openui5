@@ -2,10 +2,7 @@
   "name": "font-awesome-openui5",
   "description": "Font Awesome icons for OpenUI5",
   "main": [
-    "dist/font-awesome-openui5.bundle.js",
-    "dist/font-awesome-openui5.bundle.min.js",
-    "dist/font-awesome-openui5.js",
-    "dist/font-awesome-openui5.min.js"
+    "dist/font-awesome-openui5.bundle.js"
   ],
   "authors": [
     {
@@ -27,8 +24,11 @@
   "moduleType": [],
   "ignore": [
     "**/.*",
+    "gulpfile.js",
+    "karma.*",
     "node_modules",
     "bower_components",
+    "src",
     "test",
     "tests"
   ],
