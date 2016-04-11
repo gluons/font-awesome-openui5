@@ -15,16 +15,18 @@ Using `dist/font-awesome-openui5.min.js` or `dist/font-awesome-openui5.js` file.
 Import icons with icon source object.
 
 ```javascript
-FontAwesomeOpenUI5.importFont([
-	{
-		id: 'glass',
-		unicode: 'f000'
-	},
-	{
-		id: 'music',
-		unicode: 'f001'
-	}, ...
-])
+FontAwesomeOpenUI5.importFont(
+	[
+		{
+			id: 'glass',
+			unicode: 'f000'
+		},
+		{
+			id: 'music',
+			unicode: 'f001'
+		}, ...
+	]
+);
 ```
 
 ##### iconSource
@@ -43,19 +45,22 @@ Specific properties in icon source object. Must have `id` and `char` properties.
 
 **Example:**
 ```javascript
-FontAwesomeOpenUI5.importFont([
+FontAwesomeOpenUI5.importFont(
+	[
+		{
+			name: 'glass',
+			code: 'f000'
+		},
+		{
+			name: 'music',
+			code: 'f001'
+		}, ...
+	],
 	{
-		name: 'glass',
-		code: 'f000'
-	},
-	{
-		name: 'music',
-		code: 'f001'
-	}, ...
-], {
-	id: 'name',
-	char: 'code'
-})
+		id: 'name',
+		char: 'code'
+	}
+);
 ```
 
 #### FontAwesomeOpenUI5.loadIcons(iconFilePath)
