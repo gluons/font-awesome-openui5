@@ -93,3 +93,6 @@ Path to icon source JSON file.
 Using `dist/font-awesome-openui5.bundle.min.js` or `dist/font-awesome-openui5.bundle.js` file.
 
 No need any code. Font Awesome icons will be imported into OpenUI5 when refer these file in webpage.
+
+## Dependencies
+Use Font Awesome icons from  [Font-Awesome-Icon-Chars](https://github.com/gluons/Font-Awesome-Icon-Chars).
