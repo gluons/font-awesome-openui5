@@ -1,7 +1,15 @@
 # Font Awesome icons for OpenUI5
+[![license](https://img.shields.io/github/license/gluons/font-awesome-openui5.svg?style=flat-square)](https://github.com/gluons/font-awesome-openui5/blob/master/LICENSE)
+[![Bower](https://img.shields.io/bower/v/font-awesome-openui5.svg?style=flat-square)](https://github.com/gluons/font-awesome-openui5)
 [![Travis](https://img.shields.io/travis/gluons/font-awesome-openui5.svg?style=flat-square)](https://travis-ci.org/gluons/font-awesome-openui5)
 
 Provides [Font Awesome](http://fontawesome.io/) icons for using in [OpenUI5](http://openui5.org/).
+
+## Installation
+Via [Bower](http://bower.io/).
+```
+bower install font-awesome-openui5
+```
 
 ## Usage
 ### Core
