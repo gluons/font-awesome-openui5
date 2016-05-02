@@ -39,7 +39,7 @@ FontAwesomeOpenUI5.importFont(
 );
 ```
 
-Or with AMD ([RequireJS](http://requirejs.org/))
+Or with [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) (e.g. [RequireJS](http://requirejs.org/))
 ```javascript
 require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
 	FontAwesomeOpenUI5.importFont(
@@ -108,7 +108,7 @@ FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-l
 });
 ```
 
-Or with AMD ([RequireJS](http://requirejs.org/))
+Or with [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) (e.g. [RequireJS](http://requirejs.org/))
 ```javascript
 require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
 	FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-list.json').then(function (iconSource) {
