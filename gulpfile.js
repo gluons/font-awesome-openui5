@@ -7,6 +7,7 @@ var tap = require('gulp-tap');
 var coffee = require('gulp-coffee');
 var uglify = require('gulp-uglify');
 var header = require('gulp-header');
+var umd = require('gulp-umd');
 
 var Q = require('q');
 var del = require('del');
@@ -52,6 +53,18 @@ gulp.task('build:core', ['clean'], function () {
 		.pipe(plumber())
 		.pipe(coffee({
 			bare: true
+		}))
+		.pipe(umd({
+			dependencies: function () {
+				return [{
+					amd: 'jquery',
+					global: 'jQuery'
+				}];
+			},
+			namespace: function () {
+				return 'FontAwesomeOpenUI5';
+			},
+			template: 'umd-templates/amdWeb.js'
 		}))
 		.pipe(header(headerComment))
 		.pipe(gulp.dest('dist'))

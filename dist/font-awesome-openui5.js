@@ -4,6 +4,13 @@ Font Awesome icons for OpenUI5
 The MIT License (MIT)
 Copyright (c) 2016 Saran Tanpituckpong
 */
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else {
+    root.FontAwesomeOpenUI5 = factory(root.jQuery);
+  }
+}(this, function () {
 var FontAwesomeOpenUI5;
 
 if (jQuery !== void 0 && jQuery.sap !== void 0) {
@@ -74,3 +81,6 @@ FontAwesomeOpenUI5 = {
     })(jQuery);
   }
 };
+
+return Font-awesome-openui5;
+}));
