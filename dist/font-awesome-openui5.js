@@ -82,5 +82,5 @@ FontAwesomeOpenUI5 = {
   }
 };
 
-return Font-awesome-openui5;
+return FontAwesomeOpenUI5;
 }));

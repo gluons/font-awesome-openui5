@@ -11,8 +11,7 @@
 			}
 		],
 		"linebreak-style": [
-			"warn",
-			"windows"
+			"off"
 		],
 		"semi": [
 			"error",
@@ -38,7 +37,15 @@
 		]
 	},
 	"env": {
-		"node": true
+		"browser": true,
+		"es6": true,
+		"amd": true,
+		"jquery": true,
+		"node": true,
+		"mocha": true
+	},
+	"globals": {
+		"sap": true
 	},
 	"extends": "eslint:recommended"
 }

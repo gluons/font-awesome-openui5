@@ -10,15 +10,15 @@ module.exports = function (config) {
 
 		// frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-		frameworks: ['mocha', 'chai'],
+		frameworks: ['mocha', 'requirejs', 'chai'],
 
 
 		// list of files / patterns to load in the browser
 		files: [
-			{ pattern: 'bower_components/font-awesome-icon-chars/character-list/character-list.json', included: false, served: true },
-			'https://openui5.hana.ondemand.com/resources/sap-ui-core.js',
-			'src/font-awesome-openui5.coffee',
-			'test/test.coffee'
+			{ pattern: 'bower_components/**', included: false },
+			{ pattern: 'dist/font-awesome-openui5.min.js', included: false },
+			{ pattern: 'test/**', included: false },
+			'test/require.config.js'
 		],
 
 
@@ -28,9 +28,7 @@ module.exports = function (config) {
 
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-		preprocessors: {
-			'**/*.coffee': ['coffee']
-		},
+		preprocessors: {},
 
 
 		// test results reporter to use

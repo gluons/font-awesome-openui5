@@ -32,7 +32,9 @@ gulp.task('build:bundle', ['clean'], function () {
 	return gulp.src('src/*.bundle.coffee', { read: false })
 		.pipe(plumber())
 		.pipe(tap(function (file) {
-			file.contents = browserify(file.path, { transform: 'coffeeify' }).bundle();
+			file.contents = browserify(file.path, {
+				transform: 'coffeeify'
+			}).bundle();
 		}))
 		.pipe(buffer())
 		.pipe(header(headerComment))
@@ -61,6 +63,9 @@ gulp.task('build:core', ['clean'], function () {
 					global: 'jQuery'
 				}];
 			},
+			exports: function () {
+				return 'FontAwesomeOpenUI5';
+			},
 			namespace: function () {
 				return 'FontAwesomeOpenUI5';
 			},
@@ -83,7 +88,17 @@ gulp.task('build', ['build:bundle', 'build:core']);
 	1. Core test
 	2. Bundle test
 */
-gulp.task('test', ['build'], function () {
+gulp.task('test:clean', function () {
+	return del(['test/js/*']);
+});
+gulp.task('test:compile', ['test:clean'], function () {
+	return gulp.src('test/*.coffee')
+		.pipe(coffee({
+			bare: true
+		}))
+		.pipe(gulp.dest('test/js'));
+});
+gulp.task('test', ['test:compile', 'build'], function () {
 	return (function () {
 		var deferred = Q.defer();
 

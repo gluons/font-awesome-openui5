@@ -19,6 +19,8 @@ Using `dist/font-awesome-openui5.min.js` or `dist/font-awesome-openui5.js` file.
  - [FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)](#fontawesomeopenui5importfonticonsource-sourceproperties)
  - [FontAwesomeOpenUI5.loadIcons(iconFilePath)](#fontawesomeopenui5loadiconsiconfilepath)
 
+<br>
+
 #### FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)
 Import icons with icon source object.
 
@@ -35,6 +37,28 @@ FontAwesomeOpenUI5.importFont(
 		}, ...
 	]
 );
+```
+
+Or with AMD ([RequireJS](http://requirejs.org/))
+```javascript
+require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
+	FontAwesomeOpenUI5.importFont(
+		[
+			{
+				name: 'glass',
+				code: 'f000'
+			},
+			{
+				name: 'music',
+				code: 'f001'
+			}, ...
+		],
+		{
+			id: 'name',
+			char: 'code'
+		}
+	);
+});
 ```
 
 ##### iconSource
@@ -71,6 +95,8 @@ FontAwesomeOpenUI5.importFont(
 );
 ```
 
+<br>
+
 #### FontAwesomeOpenUI5.loadIcons(iconFilePath)
 Return: `Promise` (See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
@@ -82,10 +108,22 @@ FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-l
 });
 ```
 
+Or with AMD ([RequireJS](http://requirejs.org/))
+```javascript
+require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
+	FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-list.json').then(function (iconSource) {
+		FontAwesomeOpenUI5.importFont(iconSource);
+	});
+}
+```
+
+
 ##### iconFilePath
 Type: `String`
 
 Path to icon source JSON file.
+
+<br>
 
 ---
 
