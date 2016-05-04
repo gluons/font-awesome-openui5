@@ -114,7 +114,7 @@ require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
 	FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-list.json').then(function (iconSource) {
 		FontAwesomeOpenUI5.importFont(iconSource);
 	});
-}
+});
 ```
 
 
