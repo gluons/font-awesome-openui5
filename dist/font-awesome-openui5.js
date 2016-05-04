@@ -20,7 +20,7 @@ if (jQuery !== void 0 && jQuery.sap !== void 0) {
 }
 
 FontAwesomeOpenUI5 = {
-  version: '1.0.0',
+  version: '1.1.0',
   importFont: function(iconSource, sourceProperties) {
     var fn, i, icon, icons, len;
     if (sourceProperties == null) {
