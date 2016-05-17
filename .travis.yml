@@ -3,7 +3,8 @@ node_js:
   - "5"
   - "4"
 before_script:
-  - npm install -g gulp karma-cli
+  - npm install -g bower gulp karma-cli
+  - bower install
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 env:
