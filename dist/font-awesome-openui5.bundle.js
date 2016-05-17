@@ -1,9 +1,10 @@
 /*
-Font Awesome icons for OpenUI5
-
-The MIT License (MIT)
-Copyright (c) 2016 Saran Tanpituckpong
-*/
+ * Font Awesome icons for OpenUI5
+ * (https://gluons.github.io/font-awesome-openui5/)
+ *
+ * The MIT License (MIT)
+ * Copyright (c) 2016 Saran Tanpituckpong
+ */
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 module.exports={
 	"icons": [
@@ -1540,7 +1541,7 @@ module.exports={
 			"unicode": "f1a6"
 		},
 		{
-			"id": "pied-piper",
+			"id": "pied-piper-pp",
 			"unicode": "f1a7"
 		},
 		{
@@ -2426,6 +2427,122 @@ module.exports={
 		{
 			"id": "percent",
 			"unicode": "f295"
+		},
+		{
+			"id": "gitlab",
+			"unicode": "f296"
+		},
+		{
+			"id": "wpbeginner",
+			"unicode": "f297"
+		},
+		{
+			"id": "wpforms",
+			"unicode": "f298"
+		},
+		{
+			"id": "envira",
+			"unicode": "f299"
+		},
+		{
+			"id": "universal-access",
+			"unicode": "f29a"
+		},
+		{
+			"id": "wheelchair-alt",
+			"unicode": "f29b"
+		},
+		{
+			"id": "question-circle-o",
+			"unicode": "f29c"
+		},
+		{
+			"id": "blind",
+			"unicode": "f29d"
+		},
+		{
+			"id": "audio-description",
+			"unicode": "f29e"
+		},
+		{
+			"id": "volume-control-phone",
+			"unicode": "f2a0"
+		},
+		{
+			"id": "braille",
+			"unicode": "f2a1"
+		},
+		{
+			"id": "assistive-listening-systems",
+			"unicode": "f2a2"
+		},
+		{
+			"id": "american-sign-language-interpreting",
+			"unicode": "f2a3"
+		},
+		{
+			"id": "deaf",
+			"unicode": "f2a4"
+		},
+		{
+			"id": "glide",
+			"unicode": "f2a5"
+		},
+		{
+			"id": "glide-g",
+			"unicode": "f2a6"
+		},
+		{
+			"id": "sign-language",
+			"unicode": "f2a7"
+		},
+		{
+			"id": "low-vision",
+			"unicode": "f2a8"
+		},
+		{
+			"id": "viadeo",
+			"unicode": "f2a9"
+		},
+		{
+			"id": "viadeo-square",
+			"unicode": "f2aa"
+		},
+		{
+			"id": "snapchat",
+			"unicode": "f2ab"
+		},
+		{
+			"id": "snapchat-ghost",
+			"unicode": "f2ac"
+		},
+		{
+			"id": "snapchat-square",
+			"unicode": "f2ad"
+		},
+		{
+			"id": "pied-piper",
+			"unicode": "f2ae"
+		},
+		{
+			"id": "first-order",
+			"unicode": "f2b0"
+		},
+		{
+			"id": "yoast",
+			"unicode": "f2b1"
+		},
+		{
+			"id": "themeisle",
+			"unicode": "f2b2"
+		},
+		{
+			"id": "google-plus-official",
+			"unicode": "f2b3"
+		},
+		{
+			"id": "font-awesome",
+			"unicode": "f2b4"
 		}
 	]
 }

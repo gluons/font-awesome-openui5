@@ -17,11 +17,12 @@ var browserify = require('browserify');
 var KarmaServer = require('karma').Server;
 
 var headerComment = `/*
-Font Awesome icons for OpenUI5
-
-The MIT License (MIT)
-Copyright (c) 2016 Saran Tanpituckpong
-*/
+ * Font Awesome icons for OpenUI5
+ * (https://gluons.github.io/font-awesome-openui5/)
+ *
+ * The MIT License (MIT)
+ * Copyright (c) 2016 Saran Tanpituckpong
+ */
 `;
 
 gulp.task('clean', function () {

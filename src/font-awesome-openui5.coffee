@@ -4,7 +4,7 @@ else
   throw new Error 'Cannot find OpenUI5 library.'
 
 FontAwesomeOpenUI5 =
-  version: '1.1.0'
+  version: '1.1.1'
   importFont: (iconSource, sourceProperties = { id: 'id', char: 'unicode' }) ->
     if !sap
       throw new Error 'Cannot find OpenUI5 library.'

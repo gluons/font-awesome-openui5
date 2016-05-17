@@ -1,9 +1,10 @@
 /*
-Font Awesome icons for OpenUI5
-
-The MIT License (MIT)
-Copyright (c) 2016 Saran Tanpituckpong
-*/
+ * Font Awesome icons for OpenUI5
+ * (https://gluons.github.io/font-awesome-openui5/)
+ *
+ * The MIT License (MIT)
+ * Copyright (c) 2016 Saran Tanpituckpong
+ */
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
@@ -20,7 +21,7 @@ if (jQuery !== void 0 && jQuery.sap !== void 0) {
 }
 
 FontAwesomeOpenUI5 = {
-  version: '1.1.0',
+  version: '1.1.1',
   importFont: function(iconSource, sourceProperties) {
     var fn, i, icon, icons, len;
     if (sourceProperties == null) {

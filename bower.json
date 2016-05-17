@@ -34,7 +34,7 @@
     "umd-templates"
   ],
   "dependencies": {
-    "font-awesome-icon-chars": "^1.0.2"
+    "font-awesome-icon-chars": "^1.0.4"
   },
   "devDependencies": {}
 }
