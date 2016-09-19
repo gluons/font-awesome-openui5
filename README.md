@@ -13,7 +13,7 @@ bower install font-awesome-openui5
 
 ## Usage
 ### Core
-Using `dist/font-awesome-openui5.min.js` or `dist/font-awesome-openui5.js` file.
+Using [`dist/font-awesome-openui5.min.js`](./dist/font-awesome-openui5.min.js) or [`dist/font-awesome-openui5.js`](./dist/font-awesome-openui5.js) file.
 
 **API:**
  - [FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)](#fontawesomeopenui5importfonticonsource-sourceproperties)
@@ -39,7 +39,7 @@ FontAwesomeOpenUI5.importFont(
 );
 ```
 
-Or with [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) (e.g. [RequireJS](http://requirejs.org/))
+Or with [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)
 ```javascript
 require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
 	FontAwesomeOpenUI5.importFont(
@@ -108,7 +108,7 @@ FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-l
 });
 ```
 
-Or with [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) (e.g. [RequireJS](http://requirejs.org/))
+Or with [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)
 ```javascript
 require('font-awesome-openui5', function (FontAwesomeOpenUI5) {
 	FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-list.json').then(function (iconSource) {
@@ -128,9 +128,9 @@ Path to icon source JSON file.
 ---
 
 ### Bundle
-Using `dist/font-awesome-openui5.bundle.min.js` or `dist/font-awesome-openui5.bundle.js` file.
+Using [`dist/font-awesome-openui5.bundle.min.js`](./dist/font-awesome-openui5.bundle.min.js) or [`dist/font-awesome-openui5.bundle.js`](./dist/font-awesome-openui5.bundle.js) file.
 
-No need any code. Font Awesome icons will be imported into OpenUI5 when refer these file in webpage.
+No need more code. Font Awesome icons will be automatically imported into OpenUI5 when add either of these files in webpage.
 
 ## Dependencies
 Use Font Awesome icons from  [Font-Awesome-Icon-Chars](https://github.com/gluons/Font-Awesome-Icon-Chars).
