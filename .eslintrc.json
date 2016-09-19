@@ -21,7 +21,7 @@
 			"warn"
 		],
 		"no-console": [
-			"warn"
+			"off"
 		],
 		"no-redeclare": [
 			"warn"
@@ -38,14 +38,15 @@
 	},
 	"env": {
 		"browser": true,
+		"node": true,
 		"es6": true,
 		"amd": true,
 		"jquery": true,
-		"node": true,
 		"mocha": true
 	},
 	"globals": {
-		"sap": true
+		"sap": true,
+		"expect": true
 	},
 	"extends": "eslint:recommended"
 }

@@ -5,10 +5,7 @@
     "dist/font-awesome-openui5.bundle.js"
   ],
   "authors": [
-    {
-      "name": "Gluons",
-      "email": "sarunta@gmail.com"
-    }
+    "Saran Tanpituckpong <sarunta@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -28,13 +25,13 @@
     "karma.*",
     "node_modules",
     "bower_components",
-    "src",
     "test",
     "tests",
+    "src",
     "umd-templates"
   ],
   "dependencies": {
-    "font-awesome-icon-chars": "^1.0.4"
+    "font-awesome-icon-chars": "^1.1.1"
   },
   "devDependencies": {}
 }

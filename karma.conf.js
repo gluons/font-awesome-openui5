@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Apr 07 2016 13:15:06 GMT+0700 (เวลามาตรฐานเอเชียอาคเนย์)
+// Generated on Sun Sep 18 2016 18:15:42 GMT+0700 (เวลามาตรฐานเอเชียอาคเนย์)
 
 module.exports = function (config) {
 	config.set({
@@ -15,10 +15,19 @@ module.exports = function (config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			{ pattern: 'bower_components/**', included: false },
-			{ pattern: 'dist/font-awesome-openui5.min.js', included: false },
-			{ pattern: 'test/**', included: false },
-			'test/require.config.js'
+			'test/test-main.coffee',
+			{
+				pattern: 'bower_components/**',
+				included: false
+			},
+			{
+				pattern: 'dist/font-awesome-openui5.min.js',
+				included: false
+			},
+			{
+				pattern: 'test/test.js',
+				included: false
+			}
 		],
 
 
@@ -28,13 +37,22 @@ module.exports = function (config) {
 
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-		preprocessors: {},
+		preprocessors: {
+			'**/*.coffee': ['coffee']
+		},
 
 
 		// test results reporter to use
 		// possible values: 'dots', 'progress'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
 		reporters: ['mocha'],
+
+
+		client: {
+			mocha: {
+				reporter: 'html'
+			}
+		},
 
 
 		// web server port
@@ -51,7 +69,7 @@ module.exports = function (config) {
 
 
 		// enable / disable watching file and executing tests whenever any file changes
-		autoWatch: true,
+		autoWatch: false,
 
 
 		// start these browsers
@@ -65,19 +83,6 @@ module.exports = function (config) {
 
 		// Concurrency level
 		// how many browser should be started simultaneous
-		concurrency: Infinity,
-
-		client: {
-			mocha: {
-				reporter: 'html',
-				ui: 'bdd'
-			}
-		},
-
-		coffeePreprocessor: {
-			options: {
-				bare: true
-			}
-		}
+		concurrency: Infinity
 	});
 };

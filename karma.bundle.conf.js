@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Apr 07 2016 13:15:06 GMT+0700 (เวลามาตรฐานเอเชียอาคเนย์)
+// Generated on Sun Sep 18 2016 21:42:01 GMT+0700 (เวลามาตรฐานเอเชียอาคเนย์)
 
 module.exports = function (config) {
 	config.set({
@@ -10,14 +10,14 @@ module.exports = function (config) {
 
 		// frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-		frameworks: ['mocha', 'chai', 'browserify'],
+		frameworks: ['mocha', 'chai'],
 
 
 		// list of files / patterns to load in the browser
 		files: [
-			'https://openui5.hana.ondemand.com/resources/sap-ui-core.js',
-			'src/font-awesome-openui5.bundle.coffee',
-			'test/test.bundle.coffee'
+			'https://openui5.hana.ondemand.com/1.38.4/resources/sap-ui-core.js',
+			'dist/font-awesome-openui5.bundle.min.js',
+			'test/test.bundle.js'
 		],
 
 
@@ -27,16 +27,20 @@ module.exports = function (config) {
 
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-		preprocessors: {
-			'src/*.bundle.coffee': ['browserify'],
-			'test/*.coffee': ['coffee']
-		},
+		preprocessors: {},
 
 
 		// test results reporter to use
 		// possible values: 'dots', 'progress'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
 		reporters: ['mocha'],
+
+
+		client: {
+			mocha: {
+				reporter: 'html'
+			}
+		},
 
 
 		// web server port
@@ -53,7 +57,7 @@ module.exports = function (config) {
 
 
 		// enable / disable watching file and executing tests whenever any file changes
-		autoWatch: true,
+		autoWatch: false,
 
 
 		// start these browsers
@@ -67,23 +71,6 @@ module.exports = function (config) {
 
 		// Concurrency level
 		// how many browser should be started simultaneous
-		concurrency: Infinity,
-
-		client: {
-			mocha: {
-				reporter: 'html',
-				ui: 'bdd'
-			}
-		},
-
-		coffeePreprocessor: {
-			options: {
-				bare: true
-			}
-		},
-
-		browserify: {
-			transform: ['coffeeify']
-		}
+		concurrency: Infinity
 	});
 };
