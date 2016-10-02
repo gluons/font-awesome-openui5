@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	'use strict';
 	var FontAwesomeOpenUI5;
@@ -69,7 +69,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	FontAwesomeOpenUI5 = {
-	  version: __webpack_require__(1).version,
+	  version: '1.2.0',
 	  importFont: function(iconSource, sourceProperties) {
 	    var fn, i, icon, icons, len;
 	    if (sourceProperties == null) {
@@ -125,58 +125,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = FontAwesomeOpenUI5;
 
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-	module.exports = {
-		"name": "font-awesome-openui5",
-		"version": "1.2.0",
-		"description": "Font Awesome icons for OpenUI5",
-		"private": true,
-		"scripts": {
-			"build": "webpack && webpack -p --output-filename font-awesome-openui5.min.js && webpack --config webpack.standalone.config.js && webpack --config webpack.standalone.config.js -p --output-filename font-awesome-openui5.bundle.min.js",
-			"test": "karma start --single-run && karma start karma.bundle.conf.js --single-run"
-		},
-		"repository": {
-			"type": "git",
-			"url": "git+https://github.com/gluons/font-awesome-openui5.git"
-		},
-		"keywords": [
-			"font-awesome",
-			"font awesome",
-			"openui5"
-		],
-		"author": "Saran Tanpituckpong <sarunta@gmail.com>",
-		"license": "MIT",
-		"bugs": {
-			"url": "https://github.com/gluons/font-awesome-openui5/issues"
-		},
-		"homepage": "https://gluons.github.io/font-awesome-openui5/",
-		"dependencies": {
-			"font-awesome-icon-chars": "^1.1.1"
-		},
-		"devDependencies": {
-			"babel-core": "^6.14.0",
-			"babel-loader": "^6.2.5",
-			"babel-preset-es2015": "^6.14.0",
-			"chai": "^3.5.0",
-			"coffee-loader": "^0.7.2",
-			"coffee-script": "^1.10.0",
-			"json-loader": "^0.5.4",
-			"karma": "^1.3.0",
-			"karma-chai": "^0.1.0",
-			"karma-coffee-preprocessor": "^1.0.1",
-			"karma-firefox-launcher": "^1.0.0",
-			"karma-mocha": "^1.1.1",
-			"karma-mocha-reporter": "^2.1.0",
-			"karma-requirejs": "^1.1.0",
-			"mocha": "^3.0.2",
-			"requirejs": "^2.3.2",
-			"webpack": "^1.13.2"
-		}
-	};
 
 /***/ }
 /******/ ])

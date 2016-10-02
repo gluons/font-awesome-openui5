@@ -4,7 +4,7 @@ if jQuery? and jQuery.sap?
   jQuery.sap.require 'sap.ui.core.IconPool'
 
 FontAwesomeOpenUI5 =
-  version: require('../package.json').version
+  version: '1.2.0'
   importFont: (iconSource, sourceProperties = { id: 'id', char: 'unicode' }) ->
     unless jQuery?
       throw new Error 'No jQuery.'
