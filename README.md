@@ -18,7 +18,7 @@ Or download from **[Latest Release](https://github.com/gluons/font-awesome-openu
 Using [`dist/font-awesome-openui5.min.js`](./dist/font-awesome-openui5.min.js) or [`dist/font-awesome-openui5.js`](./dist/font-awesome-openui5.js) file.
 
 **API:**
- - [FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)](#fontawesomeopenui5importfonticonsource-sourceproperties)
+ - [FontAwesomeOpenUI5.importFont(iconSource, sourceProperties, aliasesIncluded)](#fontawesomeopenui5importfonticonsource-sourceproperties-aliasesincluded)
  - [FontAwesomeOpenUI5.loadIcons(iconFilePath)](#fontawesomeopenui5loadiconsiconfilepath)
 
 <br>
