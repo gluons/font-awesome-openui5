@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const source = require('vinyl-source-stream');
 

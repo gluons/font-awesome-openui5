@@ -1,3 +1,5 @@
+'use strict';
+
 const iconCount = window.__json__.$get('test/icon-count.json');
 
 describe('Font Awesome OpenUI5 - Bundle', function () {

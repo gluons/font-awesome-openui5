@@ -11,8 +11,6 @@ Via [Bower](http://bower.io/).
 bower install font-awesome-openui5
 ```
 
-<br>
-
 Or download from **[Latest Release](https://github.com/gluons/font-awesome-openui5/releases/latest)**.
 
 ## Usage

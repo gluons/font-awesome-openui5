@@ -1,3 +1,5 @@
+'use strict';
+
 const iconCount = window.__json__.$get('test/icon-count.json');
 
 define(['font-awesome-openui5'], function (FontAwesomeOpenUI5) {
