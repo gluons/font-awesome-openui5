@@ -15,6 +15,7 @@ module.exports = function (config) {
 
 		// list of files / patterns to load in the browser
 		files: [
+			'test/icon-count.json',
 			'test/test-main.coffee',
 			{
 				pattern: 'bower_components/**',
@@ -27,7 +28,7 @@ module.exports = function (config) {
 			{
 				pattern: 'test/test.js',
 				included: false
-			}
+			},
 		],
 
 
@@ -38,7 +39,8 @@ module.exports = function (config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'**/*.coffee': ['coffee']
+			'**/*.coffee': ['coffee'],
+			'test/*.json': ['json']
 		},
 
 

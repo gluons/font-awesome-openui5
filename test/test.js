@@ -1,4 +1,4 @@
-const iconCount = 634;
+const iconCount = window.__json__.$get('test/icon-count.json');
 
 define(['font-awesome-openui5'], function (FontAwesomeOpenUI5) {
 	describe('Font Awesome OpenUI5 - Core', function () {
@@ -13,7 +13,7 @@ define(['font-awesome-openui5'], function (FontAwesomeOpenUI5) {
 			FontAwesomeOpenUI5.loadIcons(iconSourceUrl).then(function (icons) {
 				FontAwesomeOpenUI5.importFont(icons);
 				try {
-					expect(sap.ui.core.IconPool.getIconNames('font-awesome')).to.have.lengthOf(iconCount);
+					expect(sap.ui.core.IconPool.getIconNames('font-awesome')).to.have.lengthOf(iconCount.totalCount);
 					done();
 				} catch (error) {
 					done(error);

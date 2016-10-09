@@ -5,7 +5,7 @@ if jQuery? and jQuery.sap?
 
 FontAwesomeOpenUI5 =
   version: '1.2.0'
-  importFont: (iconSource, sourceProperties = { id: 'id', char: 'unicode' }) ->
+  importFont: (iconSource, sourceProperties = { id: 'id', char: 'unicode', aliases: 'aliases' }, aliasesIncluded = true) ->
     unless jQuery?
       throw new Error 'No jQuery.'
     else unless jQuery.sap? or sap?
@@ -20,6 +20,8 @@ FontAwesomeOpenUI5 =
         do (icon) ->
           if icon.hasOwnProperty(sourceProperties.id) and icon.hasOwnProperty(sourceProperties.char)
             sap.ui.core.IconPool.addIcon icon[sourceProperties.id], 'font-awesome', 'FontAwesome', icon[sourceProperties.char]
+            if aliasesIncluded and icon.hasOwnProperty(sourceProperties.aliases) and icon[sourceProperties.aliases]?
+              sap.ui.core.IconPool.addIcon alias, 'font-awesome', 'FontAwesome', icon[sourceProperties.char] for alias in icon[sourceProperties.aliases]
           return
       return
   loadIcons: (iconFilePath) ->

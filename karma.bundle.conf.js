@@ -17,6 +17,7 @@ module.exports = function (config) {
 		files: [
 			'https://openui5.hana.ondemand.com/1.38.4/resources/sap-ui-core.js',
 			'dist/font-awesome-openui5.bundle.min.js',
+			'test/icon-count.json',
 			'test/test.bundle.js'
 		],
 
@@ -27,7 +28,9 @@ module.exports = function (config) {
 
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-		preprocessors: {},
+		preprocessors: {
+			'test/*.json': ['json']
+		},
 
 
 		// test results reporter to use

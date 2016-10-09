@@ -70,13 +70,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	FontAwesomeOpenUI5 = {
 	  version: '1.2.0',
-	  importFont: function(iconSource, sourceProperties) {
+	  importFont: function(iconSource, sourceProperties, aliasesIncluded) {
 	    var fn, i, icon, icons, len;
 	    if (sourceProperties == null) {
 	      sourceProperties = {
 	        id: 'id',
-	        char: 'unicode'
+	        char: 'unicode',
+	        aliases: 'aliases'
 	      };
+	    }
+	    if (aliasesIncluded == null) {
+	      aliasesIncluded = true;
 	    }
 	    if (typeof jQuery === "undefined" || jQuery === null) {
 	      throw new Error('No jQuery.');
@@ -89,8 +93,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else {
 	      icons = iconSource;
 	      fn = function(icon) {
+	        var alias, j, len1, ref;
 	        if (icon.hasOwnProperty(sourceProperties.id) && icon.hasOwnProperty(sourceProperties.char)) {
 	          sap.ui.core.IconPool.addIcon(icon[sourceProperties.id], 'font-awesome', 'FontAwesome', icon[sourceProperties.char]);
+	          if (aliasesIncluded && icon.hasOwnProperty(sourceProperties.aliases) && (icon[sourceProperties.aliases] != null)) {
+	            ref = icon[sourceProperties.aliases];
+	            for (j = 0, len1 = ref.length; j < len1; j++) {
+	              alias = ref[j];
+	              sap.ui.core.IconPool.addIcon(alias, 'font-awesome', 'FontAwesome', icon[sourceProperties.char]);
+	            }
+	          }
 	        }
 	      };
 	      for (i = 0, len = icons.length; i < len; i++) {

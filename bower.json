@@ -26,9 +26,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "src",
-    "umd-templates"
+    "tests"
   ],
   "dependencies": {
     "font-awesome-icon-chars": "^1.1.1"

@@ -52,7 +52,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var i, icon, icons, len;
+	var fn, i, icon, icons, j, len, len1;
 
 	if (typeof jQuery === "undefined" || jQuery === null) {
 	  throw new Error('No jQuery.');
@@ -64,6 +64,21 @@
 	  for (i = 0, len = icons.length; i < len; i++) {
 	    icon = icons[i];
 	    sap.ui.core.IconPool.addIcon(icon.id, 'font-awesome', 'FontAwesome', icon.unicode);
+	  }
+	  fn = function(icon) {
+	    var alias, k, len2, ref;
+	    sap.ui.core.IconPool.addIcon(icon.id, 'font-awesome', 'FontAwesome', icon.unicode);
+	    if (icon.aliases != null) {
+	      ref = icon.aliases;
+	      for (k = 0, len2 = ref.length; k < len2; k++) {
+	        alias = ref[k];
+	        sap.ui.core.IconPool.addIcon(alias, 'font-awesome', 'FontAwesome', icon.unicode);
+	      }
+	    }
+	  };
+	  for (j = 0, len1 = icons.length; j < len1; j++) {
+	    icon = icons[j];
+	    fn(icon);
 	  }
 	}
 
