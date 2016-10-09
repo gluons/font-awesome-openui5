@@ -11,6 +11,10 @@ Via [Bower](http://bower.io/).
 bower install font-awesome-openui5
 ```
 
+<br>
+
+Or download from **[Latest Release](https://github.com/gluons/font-awesome-openui5/releases/latest)**.
+
 ## Usage
 ### Core
 Using [`dist/font-awesome-openui5.min.js`](./dist/font-awesome-openui5.min.js) or [`dist/font-awesome-openui5.js`](./dist/font-awesome-openui5.js) file.
@@ -21,7 +25,7 @@ Using [`dist/font-awesome-openui5.min.js`](./dist/font-awesome-openui5.min.js) o
 
 <br>
 
-#### FontAwesomeOpenUI5.importFont(iconSource, sourceProperties)
+#### FontAwesomeOpenUI5.importFont(iconSource, sourceProperties, aliasesIncluded)
 Import icons with icon source object.
 
 ```javascript
@@ -68,12 +72,19 @@ Array of icon source object that contain icon id and icon unicode character.
 
 ##### sourceProperties
 Type: `Object`  
-Default: `{ id: 'id', char: 'unicode' }`
+Default: `{ id: 'id', char: 'unicode', aliases: 'aliases' }`
 
-Specific properties in icon source object. Must have `id` and `char` properties.
+Specific properties name in icon source object.
 
-`id` is **id** property name.  
-`char` is **unicode character** property name.
+`id` is **id** property name in each object.  
+`char` is **unicode character** property name in each object.  
+`aliases` is **aliases** property name in each object.
+
+##### aliasesIncluded
+Type: `Boolean`  
+Default: true
+
+Option to include Font Awesome icon **alias**.
 
 **Example:**
 ```javascript
@@ -91,7 +102,8 @@ FontAwesomeOpenUI5.importFont(
 	{
 		id: 'name',
 		char: 'code'
-	}
+	},
+	false
 );
 ```
 
@@ -130,7 +142,7 @@ Path to icon source JSON file.
 ### Bundle
 Using [`dist/font-awesome-openui5.bundle.min.js`](./dist/font-awesome-openui5.bundle.min.js) or [`dist/font-awesome-openui5.bundle.js`](./dist/font-awesome-openui5.bundle.js) file.
 
-No need more code. Font Awesome icons will be automatically imported into OpenUI5 when add either of these files in webpage.
+No need more code. Font Awesome icons will be automatically imported into OpenUI5 when add either of these files in webpage. 😄
 
 ## Dependencies
 Use Font Awesome icons from  [Font-Awesome-Icon-Chars](https://github.com/gluons/Font-Awesome-Icon-Chars).
