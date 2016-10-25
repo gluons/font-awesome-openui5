@@ -8,7 +8,7 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/dist',
-		filename: '[name].js',
+		filename: '[name].min.js',
 		library: 'font-awesome-openui5',
 		libraryTarget: 'umd',
 		umdNamedDefine: true
@@ -22,16 +22,26 @@ module.exports = {
 			{
 				test: /\.coffee$/,
 				loader: 'coffee'
+			},
+			{
+				test: /\.js$/,
+				include: /font-awesome-icon-chars/,
+				loader: 'babel'
 			}
 		]
 	},
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env': {
-				'NODE_ENV': JSON.stringify('development')
+				'NODE_ENV': JSON.stringify('production')
 			},
 			VERSION: JSON.stringify(require('./package.json').version)
 		}),
-		new webpack.BannerPlugin(copyright)
+		new webpack.BannerPlugin(copyright),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		})
 	]
 };

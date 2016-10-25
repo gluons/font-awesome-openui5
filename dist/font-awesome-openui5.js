@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var FontAwesomeOpenUI5;
@@ -69,7 +69,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	FontAwesomeOpenUI5 = {
-	  version: '1.2.0',
+	  version: ("1.2.1"),
 	  importFont: function(iconSource, sourceProperties, aliasesIncluded) {
 	    var fn, i, icon, icons, len;
 	    if (sourceProperties == null) {

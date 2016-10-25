@@ -110,7 +110,7 @@ FontAwesomeOpenUI5.importFont(
 #### FontAwesomeOpenUI5.loadIcons(iconFilePath)
 Return: `Promise` (See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-Load icon source from JSON file.
+Load icon source from JSON file. (Use [`jQuery.getJSON()`](http://api.jquery.com/jQuery.getJSON/).)
 
 ```javascript
 FontAwesomeOpenUI5.loadIcons('font-awesome-icon-chars/character-list/character-list.json').then(function (iconSource) {

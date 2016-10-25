@@ -1,10 +1,10 @@
 {
   "name": "font-awesome-openui5",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Font Awesome icons for OpenUI5",
   "private": true,
   "scripts": {
-    "build": "webpack && webpack -p --output-filename font-awesome-openui5.min.js && webpack --config webpack.standalone.config.js && webpack --config webpack.standalone.config.js -p --output-filename font-awesome-openui5.bundle.min.js",
+    "build": "webpack && webpack --config webpack.bundle.config.js",
     "pretest": "gulp count:test",
     "test": "karma start --single-run && karma start karma.bundle.conf.js --single-run"
   },
@@ -24,7 +24,7 @@
   },
   "homepage": "https://gluons.github.io/font-awesome-openui5/",
   "dependencies": {
-    "font-awesome-icon-chars": "^1.1.1"
+    "font-awesome-icon-chars": "^1.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
