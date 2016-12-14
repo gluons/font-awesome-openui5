@@ -2,7 +2,6 @@
   "name": "font-awesome-openui5",
   "version": "1.2.1",
   "description": "Font Awesome icons for OpenUI5",
-  "private": true,
   "scripts": {
     "build": "webpack && webpack --config webpack.bundle.config.js",
     "pretest": "gulp count:test",

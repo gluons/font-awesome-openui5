@@ -1,5 +1,7 @@
 # Font Awesome icons for OpenUI5
 [![license](https://img.shields.io/github/license/gluons/font-awesome-openui5.svg?style=flat-square)](https://github.com/gluons/font-awesome-openui5/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/font-awesome-openui5.svg?style=flat-square)](https://www.npmjs.com/package/font-awesome-openui5)
+[![npm](https://img.shields.io/npm/dt/font-awesome-openui5.svg?style=flat-square)](https://www.npmjs.com/package/font-awesome-openui5)
 [![Bower](https://img.shields.io/bower/v/font-awesome-openui5.svg?style=flat-square)](https://github.com/gluons/font-awesome-openui5)
 [![Travis branch](https://img.shields.io/travis/gluons/font-awesome-openui5/master.svg?style=flat-square)](https://travis-ci.org/gluons/font-awesome-openui5)
 
