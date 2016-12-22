@@ -1,0 +1,24 @@
+{
+  "name": "font-awesome-openui5",
+  "version": "2.0.0",
+  "description": "Font Awesome icons for OpenUI5",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/font-awesome-openui5.git"
+  },
+  "keywords": [
+    "font-awesome",
+    "font awesome",
+    "openui5"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/font-awesome-openui5/issues"
+  },
+  "homepage": "https://gluons.github.io/font-awesome-openui5/"
+}

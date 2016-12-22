@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20161119044246",
+    "openui5-jquery.sap": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/openui5/jquery.sap.d.ts",
+    "openui5-sap.m": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/openui5/sap.m.d.ts",
+    "openui5-sap.ui": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/openui5/sap.ui.d.ts"
+  }
+}
