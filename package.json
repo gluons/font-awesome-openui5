@@ -2,8 +2,15 @@
   "name": "font-awesome-openui5",
   "version": "2.0.0",
   "description": "Font Awesome icons for OpenUI5",
+  "main": "./dist/node/font-awesome-openui5.js",
   "private": true,
   "scripts": {
+    "build:unmin": "webpack",
+    "build:min": "webpack -p --output-filename font-awesome-openui5.min.js",
+    "build": "npm run clean && npm run build:unmin && npm run build:min && npm run tsc",
+    "clean": "rimraf ./dist",
+    "tsc": "tsc -p .",
+    "doc": "typedoc --out ./docs --module commonjs --target ES6 --includeDeclarations ./src",
     "test": "exit 0"
   },
   "repository": {
@@ -22,6 +29,25 @@
   },
   "homepage": "https://gluons.github.io/font-awesome-openui5/",
   "dependencies": {
-    "font-awesome-icon-chars": "^1.1.2"
+    "axios": "^0.15.3",
+    "font-awesome-icon-chars": "^1.2.2",
+    "lodash.defer": "^4.1.0",
+    "nvl": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.31",
+    "@types/openui5": "^1.40.1",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "json-loader": "^0.5.4",
+    "rimraf": "^2.5.4",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^1.3.3",
+    "tslint": "^4.3.1",
+    "typedoc": "^0.5.5",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0",
+    "webpack-fail-plugin": "^1.0.5"
   }
 }

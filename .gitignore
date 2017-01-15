@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/node,bower,typings,visualstudiocode,windows
+# Created by https://www.gitignore.io/api/node,bower,visualstudiocode,windows
 
 ### Node ###
 # Logs
@@ -59,11 +59,6 @@ bower_components
 .bower-tmp
 
 
-### Typings ###
-## Ignore downloaded typings
-typings
-
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -93,5 +88,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,bower,typings,visualstudiocode,windows
+# End of https://www.gitignore.io/api/node,bower,visualstudiocode,windows
 

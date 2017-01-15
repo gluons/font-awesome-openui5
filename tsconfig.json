@@ -1,11 +1,13 @@
 {
 	"compilerOptions": {
-		"module": "umd",
-		"target": "ES5",
-		"outDir": "./dist",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"target": "es6",
+		"outDir": "./dist/node",
+		"alwaysStrict": true,
 		"sourceMap": true
 	},
-	"exclude": [
-		"node_modules"
+	"include": [
+		"src/**/*"
 	]
 }
