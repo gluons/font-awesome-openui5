@@ -1,0 +1,11 @@
+{
+	"env": {
+		"jquery": true,
+		"mocha": true
+	},
+	"globals": {
+		"sap": true,
+		"expect": true
+	},
+	"extends": "gluons"
+}
