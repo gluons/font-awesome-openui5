@@ -34,7 +34,7 @@
     "nvl": "^1.0.1"
   },
   "devDependencies": {
-    "@types/node": "^6.0.31",
+    "@types/node": "6",
     "@types/openui5": "^1.40.1",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
