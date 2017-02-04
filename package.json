@@ -10,7 +10,8 @@
     "clean": "rimraf ./dist ./main",
     "tsc": "tsc -p . --sourceMap false",
     "pretest": "gulp count:test",
-    "test": "karma start ./karma.sync.conf.js && karma start ./karma.async.conf.js"
+    "test": "karma start ./karma.sync.conf.js && karma start ./karma.async.conf.js",
+    "test:local": "karma start ./karma.sync.conf.js --browsers FirefoxDeveloper && karma start ./karma.async.conf.js --browsers FirefoxDeveloper"
   },
   "repository": {
     "type": "git",

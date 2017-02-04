@@ -26,21 +26,21 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.ts$/,
-				loaders: ['babel', 'ts']
+				loaders: ['babel-loader', 'ts-loader']
 			},
 			{
 				test: /\.js$/,
-				loader: 'babel'
+				loader: 'babel-loader'
 			},
 			{
 				test: /\.json$/,
-				loader: 'json'
+				loader: 'json-loader'
 			}
 		],
 		preLoaders: [
 			{
 				test: /\.js$/,
-				loader: 'source-map'
+				loader: 'source-map-loader'
 			}
 		]
 	},
