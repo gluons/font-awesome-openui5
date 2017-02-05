@@ -1,13 +1,31 @@
+'use strict';
+
+const env = require('get-env')();
+
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const pkg = require('./package.json');
 
-const header = `Font Awesome icons for OpenUI5 ${pkg.version}
+const banner = `Font Awesome icons for OpenUI5 ${pkg.version}
 https://gluons.github.io/font-awesome-openui5/
 
 The MIT License (MIT)
 Copyright (c) 2016 Saran Tanpituckpong`;
+
+// Optimization
+let optimizationPlugins = [];
+if (env == 'prod') {
+	optimizationPlugins = [
+		new UglifyJSPlugin({
+			sourceMap: true
+		}),
+		new webpack.LoaderOptionsPlugin({
+			minimize: true
+		})
+	];
+}
 
 module.exports = {
 	entry: './src/font-awesome-openui5.ts',
@@ -19,36 +37,35 @@ module.exports = {
 		umdNamedDefine: true
 	},
 	resolve: {
-		extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+		extensions: ['.ts', '.js']
 	},
 	devtool: 'source-map',
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.ts$/,
-				loaders: ['babel-loader', 'ts-loader']
+				exclude: /node_modules/,
+				use: [
+					'babel-loader',
+					'ts-loader'
+				]
 			},
 			{
 				test: /\.js$/,
 				loader: 'babel-loader'
 			},
 			{
-				test: /\.json$/,
-				loader: 'json-loader'
-			}
-		],
-		preLoaders: [
-			{
+				enforce: 'pre',
 				test: /\.js$/,
 				loader: 'source-map-loader'
 			}
 		]
 	},
 	plugins: [
-		require('webpack-fail-plugin'),
-		new webpack.BannerPlugin(header),
+		new webpack.BannerPlugin(banner),
 		new webpack.DefinePlugin({
-			VERSION: JSON.stringify(require('./package.json').version)
-		})
+			VERSION: JSON.stringify(pkg.version)
+		}),
+		...optimizationPlugins
 	]
 };
