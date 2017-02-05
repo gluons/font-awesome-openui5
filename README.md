@@ -21,6 +21,8 @@ bower install font-awesome-openui5
 
 Via [NPM](https://www.npmjs.com/):
 
+[![NPM](https://nodei.co/npm/font-awesome-openui5.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/font-awesome-openui5)
+
 ```
 npm install font-awesome-openui5
 ```
