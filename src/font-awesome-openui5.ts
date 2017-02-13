@@ -99,6 +99,7 @@ if (VERSION) {
 	});
 }
 
+// Icons Auto-Loading
 if (typeof window !== 'undefined') { // Only for browser
 	(function () {
 		let autoload: boolean = false;
