@@ -1,3 +1,4 @@
+/// <reference path="../definitions/faui5.d.ts" />
 "use strict";
 const defer = require("lodash.defer");
 const faIconChars = require("font-awesome-icon-chars");
@@ -92,5 +93,27 @@ if (VERSION) {
         writable: false,
         value: VERSION
     });
+}
+if (typeof window !== 'undefined') {
+    (function () {
+        let autoload = false;
+        if (typeof FAUI5 !== 'undefined') {
+            autoload = FAUI5.autoload;
+        }
+        else {
+            let script = document.querySelector('script[data-icons-autoload]');
+            if (script) {
+                let autoloadAttr = script.getAttribute('data-icons-autoload');
+                autoload = (autoloadAttr != null) && ((autoloadAttr.length == 0)
+                    ||
+                        (autoloadAttr.toLowerCase() == 'true')
+                    ||
+                        (autoloadAttr == '1'));
+            }
+        }
+        if (autoload) {
+            FontAwesomeOpenUI5.load();
+        }
+    }());
 }
 module.exports = FontAwesomeOpenUI5;

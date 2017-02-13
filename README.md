@@ -50,8 +50,8 @@ yarn add font-awesome-openui5
 			FontAwesomeOpenUI5.load(); // Synchronously load Font Awesome icons to OpenUI5
 
 			/*
-			Or
-			*/
+			 * Or
+			 */
 
 			FontAwesomeOpenUI5.loadAsync(); // Asynchronously load Font Awesome icons to OpenUI5
 		</script>

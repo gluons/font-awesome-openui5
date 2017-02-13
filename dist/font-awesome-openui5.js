@@ -3256,6 +3256,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/// <reference path="../definitions/faui5.d.ts" />
 
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3371,6 +3372,23 @@ if (true) {
         writable: false,
         value: "2.0.0"
     });
+}
+if (typeof window !== 'undefined') {
+    (function () {
+        var autoload = false;
+        if (typeof FAUI5 !== 'undefined') {
+            autoload = FAUI5.autoload;
+        } else {
+            var script = document.querySelector('script[data-icons-autoload]');
+            if (script) {
+                var autoloadAttr = script.getAttribute('data-icons-autoload');
+                autoload = autoloadAttr != null && (autoloadAttr.length == 0 || autoloadAttr.toLowerCase() == 'true' || autoloadAttr == '1');
+            }
+        }
+        if (autoload) {
+            FontAwesomeOpenUI5.load();
+        }
+    })();
 }
 module.exports = FontAwesomeOpenUI5;
 

@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Font Awesome icons for OpenUI5",
   "main": "./main/font-awesome-openui5.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "build:unmin": "webpack --bail",
     "build:min": "cross-env NODE_ENV=production webpack --bail --output-filename font-awesome-openui5.min.js",
@@ -12,8 +13,9 @@
     "pretest": "gulp count:test",
     "test:sync": "karma start ./karma/sync.conf.js",
     "test:async": "karma start ./karma/async.conf.js",
-    "test": "npm run test:sync && npm run test:async",
-    "test:ffdev": "npm run test:sync -- --browsers FirefoxDeveloper && npm run test:async -- --browsers FirefoxDeveloper"
+    "test:autoload": "karma start ./karma/autoload.conf.js",
+    "test": "npm run test:sync && npm run test:async && npm run test:autoload",
+    "test:ffdev": "npm run test:sync -- --browsers FirefoxDeveloper && npm run test:async -- --browsers FirefoxDeveloper && npm run test:autoload -- --browsers FirefoxDeveloper"
   },
   "repository": {
     "type": "git",
@@ -58,7 +60,7 @@
     "source-map-loader": "^0.1.5",
     "ts-loader": "^2.0.0",
     "tslint": "^4.3.1",
-    "typescript": "^2.1.4",
+    "typescript": "^2.1.6",
     "uglify-js": "^2.7.5",
     "uglifyjs-webpack-plugin": "^0.1.3",
     "vinyl-source-stream": "^1.1.0",

@@ -7,6 +7,9 @@ const iconCount = window.__json__.$get('test/icon-count.json');
 describe('Font Awesome OpenUI5 - Browser - Asynchronous', function () {
 	this.slow(500);
 
+	it('should not autoload Font Awesome icons', () => {
+		expect(sap.ui.core.IconPool).to.be.undefined;
+	});
 	it('should asynchronously add all Font Awesome icons without aliases into OpenUI5 icon pool', () => {
 		let x = 1;
 		let FAOpenUI5Promise = FontAwesomeOpenUI5.loadAsync(null, false).then(() => {
