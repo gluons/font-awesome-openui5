@@ -35,6 +35,8 @@ yarn add font-awesome-openui5
 
 ## Usage
 
+**Normal Usage:**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -58,6 +60,49 @@ yarn add font-awesome-openui5
 	</body>
 </html>
 ```
+
+**Icons Auto-Loading:**
+
+You can auto-load (synchronously) all icons (from [default icons source](https://github.com/gluons/Font-Awesome-Icon-Chars)) with aliases by 2 ways.
+
+1. Declare the `FAUI` option before `<script>` tag.
+
+	```html
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Document</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script src="https://openui5.hana.ondemand.com/1.44.6/resources/sap-ui-core.js"></script>
+			<script>
+			let FAUI5 = {
+				autoload: true
+			};
+			</script>
+			<script src="./dist/font-awesome-openui5.min.js"></script>
+		</head>
+		<body>
+		</body>
+	</html>
+	```
+
+2. Add `data-icons-autoload` attribute in `<script>` tag.
+
+	```html
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Document</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script src="https://openui5.hana.ondemand.com/1.44.6/resources/sap-ui-core.js"></script>
+			<script src="./dist/font-awesome-openui5.min.js" data-icons-autoload></script>
+		</head>
+		<body>
+		</body>
+	</html>
+	```
 
 ## API
 

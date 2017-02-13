@@ -22,13 +22,18 @@
     "url": "git+https://github.com/gluons/font-awesome-openui5.git"
   },
   "homepage": "https://gluons.github.io/font-awesome-openui5",
+  "dependencies": {
+    "font-awesome-icon-chars": "^1.2.2"
+  },
   "ignore": [
     "**/.*",
     "gulpfile.js",
-    "karma.*",
     "webpack.config.js",
     "node_modules",
     "bower_components",
+    "definitions",
+    "karma",
+    "main",
     "test",
     "tests"
   ]

@@ -1,6 +1,12 @@
 
 # Created by https://www.gitignore.io/api/node,bower,visualstudiocode,windows
 
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
 ### Node ###
 # Logs
 logs
@@ -24,6 +30,8 @@ coverage
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
+
+# Bower dependency directory (https://bower.io/)
 
 # node-waf configuration
 .lock-wscript
@@ -50,13 +58,8 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-
-
-### Bower ###
-bower_components
-.bower-cache
-.bower-registry
-.bower-tmp
+# dotenv environment variables file
+.env
 
 
 ### VisualStudioCode ###
@@ -65,7 +68,6 @@ bower_components
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -89,4 +91,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,bower,visualstudiocode,windows
-
