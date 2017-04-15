@@ -1,0 +1,57 @@
+{
+  "name": "font-awesome-openui5",
+  "version": "2.1.0",
+  "description": "Font Awesome icons for OpenUI5.",
+  "main": "./common/font-awesome-openui5.js",
+  "typings": "./common/font-awesome-openui5.d.ts",
+  "files": [
+    "autoload.js",
+    "common",
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "concurrently 'tsc -p .' 'webpack'",
+    "clean": "rimraf ./common/ ./dist/",
+    "lint": "tslint -p . --type-check && eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/font-awesome-openui5.git"
+  },
+  "keywords": [
+    "font-awesome",
+    "font awesome",
+    "openui5"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/font-awesome-openui5/issues"
+  },
+  "homepage": "https://github.com/gluons/font-awesome-openui5",
+  "dependencies": {
+    "font-awesome-icon-chars": "^1.2.2",
+    "lodash.defer": "^4.1.0",
+    "lodash.isnil": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "6",
+    "@types/openui5": "^1.40.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.4.0",
+    "concurrently": "^3.4.0",
+    "eslint": "^3.19.0",
+    "eslint-config-gluons": "^2.0.1",
+    "rimraf": "^2.6.1",
+    "source-map-loader": "^0.2.1",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2",
+    "uglify-js": "^2.8.22",
+    "uglifyjs-webpack-plugin": "^0.4.2",
+    "webpack": "^2.3.3"
+  }
+}

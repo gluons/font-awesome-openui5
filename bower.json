@@ -1,0 +1,25 @@
+{
+  "name": "font-awesome-openui5",
+  "description": "Font Awesome icons for OpenUI5.",
+  "main": "index.js",
+  "authors": [
+    "Saran Tanpituckpong <sarunta@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "font-awesome",
+    "font awesome",
+    "openui5"
+  ],
+  "homepage": "https://github.com/gluons/font-awesome-openui5",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome-icon-chars": "^1.2.2"
+  }
+}
