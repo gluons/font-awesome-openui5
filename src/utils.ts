@@ -7,9 +7,9 @@ import * as isNil from 'lodash.isnil';
  * @returns {Error}
  */
 function checkRequirement(): Error {
-	if (isNil(jQuery)) {
+	if ((typeof jQuery === 'undefined') || (jQuery === null)) {
 		return new Error('jQuery not found.');
-	} else if (isNil(jQuery.sap) || isNil(sap)) {
+	} else if (isNil(jQuery.sap) || ((typeof sap === 'undefined') || (sap === null))) {
 		return new Error('OpenUI5 not found.');
 	} else {
 		return null;

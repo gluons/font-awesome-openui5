@@ -13,8 +13,13 @@
     "prebuild": "npm run clean",
     "build": "concurrently 'tsc -p .' 'webpack'",
     "clean": "rimraf ./common/ ./dist/",
-    "lint": "tslint -p . --type-check && eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run lint:ts && npm run lint:js",
+    "lint:js": "eslint .",
+    "lint:ts": "tslint -p ./tsconfig.json --type-check",
+    "pretest": "concurrently 'npm run build' 'gulp count:test'",
+    "test": "npm run test:node && npm run test:browser",
+    "test:browser": "karma start",
+    "test:node": "mocha -r ts-node/register ./test/node.ts"
   },
   "repository": {
     "type": "git",
@@ -37,15 +42,29 @@
     "lodash.isnil": "^4.0.0"
   },
   "devDependencies": {
+    "@types/chai": "^3.5.0",
+    "@types/gulp": "^4.0.2",
+    "@types/mocha": "^2.2.40",
     "@types/node": "6",
     "@types/openui5": "^1.40.1",
+    "@types/vinyl-source-stream": "^0.0.29",
     "@types/webpack": "^2.2.14",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.4.0",
+    "chai": "latest",
     "concurrently": "^3.4.0",
     "eslint": "^3.19.0",
     "eslint-config-gluons": "^2.0.1",
+    "gulp": "^3.9.1",
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-json-preprocessor": "^0.3.3",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-webpack": "^2.0.3",
+    "mocha": "latest",
     "rimraf": "^2.6.1",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.0.3",
@@ -54,6 +73,7 @@
     "typescript": "^2.2.2",
     "uglify-js": "^2.8.22",
     "uglifyjs-webpack-plugin": "^0.4.2",
+    "vinyl-source-stream": "^1.1.0",
     "webpack": "^2.3.3"
   }
 }
