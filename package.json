@@ -39,6 +39,7 @@
   "devDependencies": {
     "@types/node": "6",
     "@types/openui5": "^1.40.1",
+    "@types/webpack": "^2.2.14",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.4.0",
@@ -48,6 +49,7 @@
     "rimraf": "^2.6.1",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.0.3",
+    "ts-node": "^3.0.2",
     "tslint": "^5.1.0",
     "typescript": "^2.2.2",
     "uglify-js": "^2.8.22",

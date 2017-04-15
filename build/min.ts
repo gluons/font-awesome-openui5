@@ -1,8 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+import * as path from 'path';
+import * as UglifyJSPlugin from 'uglifyjs-webpack-plugin';
+import * as webpack from 'webpack';
 
-module.exports = {
+export default {
 	entry: path.resolve(__dirname, '../src/autoload.ts'),
 	output: {
 		path: path.resolve(__dirname, '../dist'),

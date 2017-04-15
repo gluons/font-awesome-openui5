@@ -1,6 +1,6 @@
-const path = require('path');
+import * as path from 'path';
 
-module.exports = {
+export default {
 	entry: path.resolve(__dirname, '../src/autoload.ts'),
 	output: {
 		path: path.resolve(__dirname, '../dist'),
