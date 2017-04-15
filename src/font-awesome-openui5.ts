@@ -1,7 +1,7 @@
 /// <reference types="font-awesome-icon-chars" />
 
-import defer from 'lodash.defer';
-import isNil from 'lodash.isnil';
+import * as defer from 'lodash.defer';
+import * as isNil from 'lodash.isnil';
 import { addIcon, importIconPool } from './utils';
 
 /**

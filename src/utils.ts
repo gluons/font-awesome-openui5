@@ -1,4 +1,4 @@
-import isNil from 'lodash.isnil';
+import * as isNil from 'lodash.isnil';
 
 /**
  * Check the requirement for Font Awesome OpenUI5.
