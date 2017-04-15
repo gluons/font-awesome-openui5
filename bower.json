@@ -1,7 +1,10 @@
 {
   "name": "font-awesome-openui5",
   "description": "Font Awesome icons for OpenUI5.",
-  "main": "index.js",
+  "main": "./dist/font-awesome-openui5.js",
+  "moduleType": [
+    "globals"
+  ],
   "authors": [
     "Saran Tanpituckpong <sarunta@gmail.com>"
   ],
