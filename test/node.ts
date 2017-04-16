@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import FontAwesomeOpenUI5 from '../src/font-awesome-openui5';
-import * as utils from '../src/utils';
+import FontAwesomeOpenUI5 from '../common/font-awesome-openui5.js';
+import * as utils from '../common/utils.js';
 
 describe('Font Awesome OpenUI5 - Node', () => {
 	describe(`FontAwesomeOpenUI5 class`, () => {
