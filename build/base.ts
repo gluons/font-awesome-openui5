@@ -1,8 +1,14 @@
-import { Configuration } from 'webpack';
+import * as webpack from 'webpack';
 
 import * as path from 'path';
 
-const baseConfig: Configuration = {
+const banner = `Font Awesome icons for OpenUI5
+https://font-awesome-openui5.surge.sh/
+
+The MIT License (MIT)
+Copyright (c) 2016 Saran Tanpituckpong`;
+
+const baseConfig: webpack.Configuration = {
 	entry: path.resolve(__dirname, '../src/autoload.ts'),
 	output: {
 		path: path.resolve(__dirname, '../dist')
@@ -40,6 +46,9 @@ const baseConfig: Configuration = {
 			}
 		]
 	},
+	plugins: [
+		new webpack.BannerPlugin(banner)
+	],
 	devtool: 'source-map',
 	resolve: {
 		extensions: ['.ts', '.js', '.json']
