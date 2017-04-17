@@ -52,6 +52,7 @@
     "@types/openui5": "^1.40.1",
     "@types/vinyl-source-stream": "^0.0.29",
     "@types/webpack": "^2.2.14",
+    "@types/webpack-merge": "^0.0.4",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.4.0",
@@ -77,6 +78,7 @@
     "uglify-js": "^2.8.22",
     "uglifyjs-webpack-plugin": "^0.4.2",
     "vinyl-source-stream": "^1.1.0",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "webpack-merge": "^4.1.0"
   }
 }
