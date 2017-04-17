@@ -35,11 +35,31 @@ yarn add font-awesome-openui5
 
 ## Usage
 
+**In [Node](https://nodejs.org/):**
+
 ```javascript
 import * as faIcons from 'font-awesome-icon-chars';
 import FontAwesomeOpenUI5 from 'font-awesome-openui5';
 
 FontAwesomeOpenUI5.loadIcons(faIcons);
+```
+
+**Via CDN:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- import OpenUI5 -->
+	<script src="https://openui5.hana.ondemand.com/1.44.9/resources/sap-ui-core.js"></script>
+	<!-- import Font Awesome for OpenUI5 -->
+	<script src="https://unpkg.com/font-awesome-openui5@^2.1.0/dist/font-awesome-openui5.min.js"></script>
+</head>
+<body>
+</body>
+</html>
 ```
 
 ## API
