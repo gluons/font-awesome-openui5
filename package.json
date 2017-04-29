@@ -1,6 +1,6 @@
 {
   "name": "font-awesome-openui5",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Font Awesome icons for OpenUI5.",
   "main": "./common/font-awesome-openui5.common.js",
   "module": "./common/font-awesome-openui5.js",
