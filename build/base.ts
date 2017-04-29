@@ -6,7 +6,7 @@ const banner = `Font Awesome icons for OpenUI5
 https://font-awesome-openui5.surge.sh/
 
 The MIT License (MIT)
-Copyright (c) 2016 Saran Tanpituckpong`;
+Copyright (c) 2016-2017 Saran Tanpituckpong`;
 
 const baseConfig: webpack.Configuration = {
 	entry: path.resolve(__dirname, '../src/autoload.ts'),

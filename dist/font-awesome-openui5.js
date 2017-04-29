@@ -3,7 +3,7 @@
  * https://font-awesome-openui5.surge.sh/
  * 
  * The MIT License (MIT)
- * Copyright (c) 2016 Saran Tanpituckpong
+ * Copyright (c) 2016-2017 Saran Tanpituckpong
  */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
