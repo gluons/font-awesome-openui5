@@ -42,6 +42,7 @@ const baseConfig: webpack.Configuration = {
 			},
 			{
 				test: /\.js$/,
+				exclude: /node_modules/,
 				loader: 'babel-loader'
 			}
 		]

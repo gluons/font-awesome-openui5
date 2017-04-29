@@ -1,6 +1,7 @@
 "use strict";
+
 Object.defineProperty(exports, "__esModule", { value: true });
-const isNil = require("lodash.isnil");
+var isNil = require("lodash.isnil");
 /**
  * Check the requirement for Font Awesome OpenUI5.
  * Return error when requirement is not met.
@@ -8,13 +9,11 @@ const isNil = require("lodash.isnil");
  * @returns {Error}
  */
 function checkRequirement() {
-    if ((typeof jQuery === 'undefined') || (jQuery === null)) {
+    if (typeof jQuery === 'undefined' || jQuery === null) {
         return new Error('jQuery not found.');
-    }
-    else if (isNil(jQuery.sap) || ((typeof sap === 'undefined') || (sap === null))) {
+    } else if (isNil(jQuery.sap) || typeof sap === 'undefined' || sap === null) {
         return new Error('OpenUI5 not found.');
-    }
-    else {
+    } else {
         return null;
     }
 }
@@ -23,11 +22,10 @@ exports.checkRequirement = checkRequirement;
  * Import OpenUI5 IconPool.
  */
 function importIconPool() {
-    let requirementError = checkRequirement();
+    var requirementError = checkRequirement();
     if (isNil(requirementError)) {
         jQuery.sap.require('sap.ui.core.IconPool');
-    }
-    else {
+    } else {
         throw requirementError;
     }
 }
