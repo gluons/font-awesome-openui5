@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/gluons/font-awesome-openui5",
   "dependencies": {
-    "font-awesome-icon-chars": "^1.2.3",
+    "font-awesome-icon-chars": "^1.2.5",
     "lodash.defer": "^4.1.0",
     "lodash.isnil": "^4.0.0"
   },
