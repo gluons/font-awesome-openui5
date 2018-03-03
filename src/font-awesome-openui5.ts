@@ -4,6 +4,13 @@ import { addIcon, importIconPool } from './utils';
 
 const { solid, regular, brands } = faIconChars;
 
+/**
+ * Font Awesome OpenUI5
+ *
+ * @export
+ * @abstract
+ * @class FontAwesomeOpenUI5
+ */
 export default abstract class FontAwesomeOpenUI5 {
 	/**
 	 * Load Font Awesome icons into OpenUI5.
@@ -41,3 +48,5 @@ export default abstract class FontAwesomeOpenUI5 {
 		});
 	}
 }
+
+module.exports = FontAwesomeOpenUI5;

@@ -2,7 +2,15 @@
   "name": "font-awesome-openui5",
   "version": "3.0.0",
   "description": "Font Awesome icons for OpenUI5.",
-  "scripts": {},
+  "main": "./dist/font-awesome-openui5.js",
+  "unpkg": "./dist/autoload.js",
+  "jsdelivr": "./dist/autoload.js",
+  "scripts": {
+    "prebuild": "rimraf ./dist/*",
+    "build:node": "tsc -d -p .",
+    "build:web": "webpack --mode production",
+    "build": "run-p build:*"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gluons/font-awesome-openui5.git"
@@ -25,8 +33,14 @@
   "devDependencies": {
     "@types/node": "^9.4.6",
     "@types/openui5": "^1.40.2",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^4.0.1",
     "tslint": "^5.9.1",
     "tslint-config-gluons": "^1.0.5",
-    "typescript": "^2.7.2"
+    "typescript": "^2.7.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-stylish": "^0.1.6"
   }
 }
