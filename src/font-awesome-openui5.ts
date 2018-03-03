@@ -1,68 +1,43 @@
-/// <reference types="font-awesome-icon-chars" />
+import faIconChars from 'font-awesome-icon-chars';
 
-import * as defer from 'lodash.defer';
-import * as isNil from 'lodash.isnil';
 import { addIcon, importIconPool } from './utils';
 
-/**
- * Font Awesome OpenUI5 icons loader.
- *
- * @abstract
- * @class FontAwesomeOpenUI5
- */
-abstract class FontAwesomeOpenUI5 {
+const { solid, regular, brands } = faIconChars;
+
+export default abstract class FontAwesomeOpenUI5 {
 	/**
-	 * Add icons into OpenUI5.
+	 * Load Font Awesome icons into OpenUI5.
 	 *
 	 * @static
-	 * @see [Font Awesome Icon Character List]{@link https://github.com/gluons/Font-Awesome-Icon-Chars}
-	 * @param {FontAwesomeIconChars.Icon[]} icons Icons source.
-	 * @param {boolean} [includeAliases=true] Include icons aliases.
-	 *
-	 * @memberOf FontAwesomeOpenUI5
+	 * @memberof FontAwesomeOpenUI5
 	 */
-	public static loadIcons(icons: FontAwesomeIconChars.Icon[], includeAliases = true): void {
-		if (isNil(sap.ui.core.IconPool)) {
-			importIconPool();
-		}
+	public static loadIcons(): void {
+		importIconPool();
 
-		icons.forEach(icon => {
-			// Add icon.
-			if (!isNil(icon.id) && !isNil(icon.unicode)) {
-				addIcon(icon.id, icon.unicode);
-			}
-			// Add icon aliases.
-			if (includeAliases && Array.isArray(icon.aliases) && (icon.aliases.length > 0)) {
-				icon.aliases.forEach(alias => {
-					addIcon(alias, icon.unicode);
-				});
-			}
-		});
+		solid.forEach(icon => addIcon(icon.name, icon.unicode, 'solid'));
+		regular.forEach(icon => addIcon(icon.name, icon.unicode, 'regular'));
+		brands.forEach(icon => addIcon(icon.name, icon.unicode, 'brands'));
 	}
-
 	/**
-	 * Add icons into OpenUI5 asynchronously.
+	 * Load Font Awesome icons into OpenUI5 asynchronously.
 	 *
 	 * @static
-	 * @see {@link loadIcons}
-	 * @param {FontAwesomeIconChars.Icon[]} icons Icons source.
-	 * @param {boolean} [includeAliases=true] Include icons aliases.
-	 * @returns {Promise<void>}
-	 *
-	 * @memberOf FontAwesomeOpenUI5
+	 * @returns
+	 * @memberof FontAwesomeOpenUI5
 	 */
-	public static loadIconsAsync(icons: FontAwesomeIconChars.Icon[], includeAliases = true): Promise<void> {
-		return new Promise<void>((resolve, reject) => {
-			defer(() => {
-				try {
-					FontAwesomeOpenUI5.loadIcons(icons, includeAliases);
-					resolve();
-				} catch (err) {
-					reject(err);
-				}
-			});
+	public static loadIconsAsync() {
+		return new Promise((resolve, reject) => {
+			setTimeout(
+				() => {
+					try {
+						FontAwesomeOpenUI5.loadIcons();
+						resolve();
+					} catch (err) {
+						reject(err);
+					}
+				},
+				0
+			);
 		});
 	}
 }
-
-export default FontAwesomeOpenUI5;
