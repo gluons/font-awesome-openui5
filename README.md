@@ -62,6 +62,19 @@ FontAwesomeOpenUI5.loadIcons(faIcons);
 </html>
 ```
 
+---
+
+All Font Awesome icons are prefixed with `font-awesome` in [Icon Pool](https://openui5.hana.ondemand.com/#/api/sap.ui.core.IconPool).
+
+**Example:**
+
+```javascript
+let button = new sap.m.Button({
+	text: 'Send'
+	icon: 'sap-icon://font-awesome/paper-plane'
+});
+```
+
 ## API
 
 ### FontAwesomeOpenUI5.loadIcons(icons, [includeAliases])
