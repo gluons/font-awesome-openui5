@@ -1,5 +1,4 @@
 const { resolve } = require('path');
-const { BannerPlugin } = require('webpack');
 const StylishReporter = require('webpack-stylish');
 
 const pkg = require('./package.json');
