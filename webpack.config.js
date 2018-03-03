@@ -1,8 +1,6 @@
 const { resolve } = require('path');
 const StylishReporter = require('webpack-stylish');
 
-const pkg = require('./package.json');
-
 const stylish = new StylishReporter();
 
 module.exports = {
