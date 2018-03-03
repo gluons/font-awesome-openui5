@@ -1,5 +1,7 @@
 import isNil from 'lodash.isnil';
 
+import hasjQuery from './hasjQuery';
+
 /**
  * Does OpenUI5 exist?
  *
@@ -7,5 +9,7 @@ import isNil from 'lodash.isnil';
  * @returns {boolean}
  */
 export default function hasOpenUI5(): boolean {
-	return !isNil(jQuery.sap) && !isNil(sap);
+	let hasSap = (typeof sap !== 'undefined') && (sap !== null);
+
+	return hasjQuery() && !isNil(jQuery.sap) && hasSap;
 }

@@ -7,5 +7,7 @@ import isNil from 'lodash.isnil';
  * @returns {boolean}
  */
 export default function hasIconPool(): boolean {
-	return !isNil(sap.ui) && !isNil(sap.ui.core) && !isNil(sap.ui.core.IconPool);
+	let hasSap = (typeof sap !== 'undefined') && (sap !== null);
+
+	return hasSap && !isNil(sap.ui) && !isNil(sap.ui.core) && !isNil(sap.ui.core.IconPool);
 }

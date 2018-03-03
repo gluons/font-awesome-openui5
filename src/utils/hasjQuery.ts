@@ -1,5 +1,3 @@
-import isNil from 'lodash.isnil';
-
 /**
  * Does jQuery exist?
  *
@@ -7,5 +5,5 @@ import isNil from 'lodash.isnil';
  * @returns {boolean}
  */
 export default function hasjQuery(): boolean {
-	return !isNil(jQuery);
+	return (typeof jQuery !== 'undefined') && (jQuery !== null);
 }
