@@ -1,4 +1,4 @@
-const faFontFamily = '"Font Awesome 5 Free"';
+const faFontFamily = 'Font Awesome 5 Free';
 
 export type FontAwesomeStyle = 'solid' | 'regular' | 'brands';
 
