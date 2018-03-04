@@ -34,6 +34,8 @@ yarn add font-awesome-openui5
   - **unpkg:** `https://unpkg.com/font-awesome-openui5@^3`
   - **jsDelivr:** `https://cdn.jsdelivr.net/npm/font-awesome-openui5@^3`
 
+  <br>
+
   ```html
   <!DOCTYPE html>
   <html lang="en">
