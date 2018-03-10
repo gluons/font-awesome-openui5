@@ -45,6 +45,9 @@ yarn add font-awesome-openui5
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   	<title>Document</title>
 
+  	<!-- Font Awesome -->
+  	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
   	<!-- OpenUI5 -->
   	<script
   		id="sap-ui-bootstrap"
