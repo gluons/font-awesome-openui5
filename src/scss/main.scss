@@ -1,0 +1,33 @@
+body {
+	min-height: 100vh;
+	font-size: 16px;
+	@media screen and (max-width: 576px) {
+		font-size: 10px;
+	}
+}
+.container {
+	padding: 0 2rem;
+
+	@for $i from 1 through 6 {
+		h#{$i} {
+			word-wrap: break-word;
+		}
+	}
+
+	.section {
+		margin: 2rem 0;
+
+		h1:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+		p {
+			margin: .5em 0;
+		}
+		ul {
+			margin-left: 1em;
+		}
+	}
+}
+img {
+	max-width: 100%;
+}

@@ -1,0 +1,31 @@
+import VueRouter from 'vue-router';
+
+import Home from './views/Home';
+import Start from './views/Start';
+import API from './views/API';
+import Demo from './views/Demo';
+
+const routes = [
+	{
+		path: '/',
+		component: Home
+	},
+	{
+		path: '/start',
+		component: Start
+	},
+	{
+		path: '/api',
+		component: API
+	},
+	{
+		path: '/demo',
+		component: Demo
+	}
+];
+
+const router = new VueRouter({
+	routes
+});
+
+export default router;
