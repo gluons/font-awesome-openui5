@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/gluons/font-awesome-openui5/issues"
   },
-  "homepage": "https://github.com/gluons/font-awesome-openui5",
+  "homepage": "https://font-awesome-openui5.surge.sh/",
   "dependencies": {
     "font-awesome-icon-chars": "^2.0.0",
     "lodash.isnil": "^4.0.0"
