@@ -10,6 +10,10 @@ Provides [Font Awesome](https://fontawesome.com/) icons for using in [OpenUI5](h
 
 > Use icons source from [Font-Awesome-Icon-Chars](https://github.com/gluons/Font-Awesome-Icon-Chars).
 
+---
+
+For full documentation & demo, see https://font-awesome-openui5.surge.sh/
+
 ## Installation
 
 **Via [npm](https://www.npmjs.com):**
