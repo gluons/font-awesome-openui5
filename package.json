@@ -5,6 +5,9 @@
   "main": "./dist/font-awesome-openui5.js",
   "unpkg": "./dist/autoload.js",
   "jsdelivr": "./dist/autoload.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf ./dist/*",
     "build:node": "tsc -d -p .",
