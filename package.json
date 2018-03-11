@@ -1,6 +1,6 @@
 {
   "name": "font-awesome-openui5",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Font Awesome icons for OpenUI5.",
   "main": "./dist/font-awesome-openui5.js",
   "unpkg": "./dist/autoload.js",
