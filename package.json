@@ -5,6 +5,7 @@
   "main": "./dist/font-awesome-openui5.js",
   "unpkg": "./dist/autoload.js",
   "jsdelivr": "./dist/autoload.js",
+  "typings": "./dist/font-awesome-openui5.d.ts",
   "files": [
     "dist"
   ],
