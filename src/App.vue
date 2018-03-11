@@ -14,16 +14,45 @@
 		MenuItem(name='api')
 			Icon(type='document-text')
 			| API
-		MenuItem(name='demo')
-			Icon(type='film-marker')
-			| Demo
+		Submenu(name='demo')
+			template(slot='title')
+				Icon(type='film-marker')
+				| Demo
+			MenuItem(name='demo-solid') Solid Icons
+			MenuItem(name='demo-regular') Regular Icons
+			MenuItem(name='demo-brands') Brands Icons
 	router-view
 </template>
 
 
 <script>
+const demoNameRegex = /^(demo)-([a-z]+)/;
+const demoPathRegex = /^\/(demo)\/([a-z]+)/;
+
 function pathToMenuName(path) {
-	return path !== '/' ? path.substr(1) : 'home';
+	if (demoPathRegex.test(path)) {
+		let matches = path.match(demoPathRegex);
+		let demo = matches[1];
+		let style = matches[2];
+		return `${demo}-${style}`;
+	} else {
+		return path !== '/' ? path.substr(1) : 'home';
+	}
+}
+
+function menuNameToPath(menuName) {
+	let path;
+	if (menuName === 'home') {
+		path = '/';
+	} else if (demoNameRegex.test(menuName)) {
+		let matches = menuName.match(demoNameRegex);
+		let demo = matches[1];
+		let style = matches[2];
+		path = `/${demo}/${style}`;
+	} else {
+		path = `/${menuName}`;
+	}
+	return path;
 }
 
 export default {
@@ -44,12 +73,7 @@ export default {
 	},
 	methods: {
 		onMenuSelect(menuName) {
-			let path = '/';
-			if (menuName === 'home') {
-				path = '/';
-			} else {
-				path = `/${menuName}`;
-			}
+			let path = menuNameToPath(menuName);
 			this.$router.push(path);
 		}
 	}

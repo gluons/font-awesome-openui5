@@ -1,8 +1,11 @@
 {
-	"extends": "gluons/vue",
+	"extends": "gluons/vue-babel",
 	"rules": {
 		"vue/script-indent": ["erorr", "tab", {
 			"switchCase": 1
 		}]
+	},
+	"globals": {
+		"sap": false
 	}
 }

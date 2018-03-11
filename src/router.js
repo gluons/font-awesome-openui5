@@ -19,8 +19,9 @@ const routes = [
 		component: API
 	},
 	{
-		path: '/demo',
-		component: Demo
+		path: '/demo/:faStyle',
+		component: Demo,
+		props: true
 	}
 ];
 
