@@ -1,0 +1,19 @@
+let solidButton = new sap.m.Button({
+	text: 'Save',
+	icon: 'sap-icon://font-awesome-solid/save'
+});
+solidButton.addStyleClass('fa-icon solid');
+
+
+let regularButton = new sap.m.Button({
+	text: 'Send',
+	icon: 'sap-icon://font-awesome-regular/paper-plane'
+});
+regularButton.addStyleClass('fa-icon regular');
+
+
+let brandsButton = new sap.m.Button({
+	text: 'View on GitHub',
+	icon: 'sap-icon://font-awesome-brands/github'
+});
+brandsButton.addStyleClass('fa-icon brands');

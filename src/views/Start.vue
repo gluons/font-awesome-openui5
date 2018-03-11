@@ -64,6 +64,17 @@
 				text: 'Send',
 				icon: 'sap-icon://font-awesome-solid/paper-plane'
 			});
+	.section
+		h1 Note
+		p You probably need to add some custom CSS classes to make icon show properly.
+		highlight-code(lang='css').
+			.fa-icon.solid .sapUiIcon:before {
+				font-weight: 900;
+			}
+			.fa-icon.brands .sapUiIcon:before, .fa-icon.regular .sapUiIcon:before {
+				font-weight: 400;
+			}
+		highlight-code(lang='javascript') {{ ui5Buttons }}
 </template>
 
 
@@ -71,6 +82,7 @@
 import BlankLink from '@/components/BlankLink';
 
 import usageCode from '@/code/usage.txt';
+import ui5Buttons from '@/code/ui5-buttons.txt';
 
 export default {
 	name: 'Start',
@@ -79,7 +91,8 @@ export default {
 	},
 	data() {
 		return {
-			usageCode
+			usageCode,
+			ui5Buttons
 		};
 	}
 };
