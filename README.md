@@ -2,26 +2,19 @@
 [![license](https://img.shields.io/github/license/gluons/font-awesome-openui5.svg?style=flat-square)](https://github.com/gluons/font-awesome-openui5/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/font-awesome-openui5.svg?style=flat-square)](https://www.npmjs.com/package/font-awesome-openui5)
 [![npm](https://img.shields.io/npm/dt/font-awesome-openui5.svg?style=flat-square)](https://www.npmjs.com/package/font-awesome-openui5)
-[![Bower](https://img.shields.io/bower/v/font-awesome-openui5.svg?style=flat-square)](https://github.com/gluons/font-awesome-openui5)
+[![Codacy grade](https://img.shields.io/codacy/grade/1bb88f30b53747ce83e3d63b27b226b7.svg?style=flat-square)](https://www.codacy.com/app/gluons/font-awesome-openui5)
 [![Travis](https://img.shields.io/travis/gluons/font-awesome-openui5.svg?style=flat-square)](https://travis-ci.org/gluons/font-awesome-openui5)
-[![Dependency Status](https://dependencyci.com/github/gluons/font-awesome-openui5/badge?style=flat-square)](https://dependencyci.com/github/gluons/font-awesome-openui5)
-[![ESLint Gluons](https://img.shields.io/badge/code%20style-gluons-9C27B0.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
+[![TSLint](https://img.shields.io/badge/TSLint-gluons-15757B.svg?style=flat-square)](https://github.com/gluons/tslint-config-gluons)
 
-Provides [Font Awesome](http://fontawesome.io/) icons for using in [OpenUI5](http://openui5.org/).
+Provides [Font Awesome](https://fontawesome.com/) icons for using in [OpenUI5](http://openui5.org/).
 
 > Use icons source from [Font-Awesome-Icon-Chars](https://github.com/gluons/Font-Awesome-Icon-Chars).
 
 ## Installation
 
-**Via [Bower](https://bower.io):**
+**Via [npm](https://www.npmjs.com):**
 
-```
-bower install font-awesome-openui5
-```
-
-**Via [NPM](https://www.npmjs.com):**
-
-[![NPM](https://nodei.co/npm/font-awesome-openui5.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/font-awesome-openui5)
+[![npm](https://nodei.co/npm/font-awesome-openui5.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/font-awesome-openui5)
 
 ```
 npm install font-awesome-openui5
@@ -35,102 +28,81 @@ yarn add font-awesome-openui5
 
 ## Usage
 
-**In [Node](https://nodejs.org/):**
+- **In browser**
 
-```javascript
-import * as faIcons from 'font-awesome-icon-chars';
-import FontAwesomeOpenUI5 from 'font-awesome-openui5';
+  You can use this via CDN such as [**unpkg**](https://unpkg.com/) or [**jsDelivr**](https://www.jsdelivr.com/).
 
-FontAwesomeOpenUI5.loadIcons(faIcons);
-```
+  - **unpkg:** `https://unpkg.com/font-awesome-openui5@^3`
+  - **jsDelivr:** `https://cdn.jsdelivr.net/npm/font-awesome-openui5@^3`
 
-**Via CDN:**
+  <br>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<!-- import OpenUI5 -->
-	<script src="https://openui5.hana.ondemand.com/1.44.9/resources/sap-ui-core.js"></script>
-	<!-- import Font Awesome for OpenUI5 -->
-	<script src="https://unpkg.com/font-awesome-openui5@^2.1.0/dist/font-awesome-openui5.min.js"></script>
-</head>
-<body>
-</body>
-</html>
-```
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<title>Document</title>
 
----
+  	<!-- Font Awesome -->
+  	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
-All Font Awesome icons are prefixed with `font-awesome` in [Icon Pool](https://openui5.hana.ondemand.com/#/api/sap.ui.core.IconPool).
+  	<!-- OpenUI5 -->
+  	<script
+  		id="sap-ui-bootstrap"
+  		src="https://openui5.hana.ondemand.com/1.52.7/resources/sap-ui-core.js"
+  		data-sap-ui-theme="sap_belize"
+  		data-sap-ui-libs="sap.m"
+  	>
+  	</script>
+
+  	<!-- Via unpkg -->
+  	<script src="https://unpkg.com/font-awesome-openui5@^3"></script>
+  	<!-- Or via jsDelivr -->
+  	<script src="https://cdn.jsdelivr.net/npm/font-awesome-openui5@^3"></script>
+  </head>
+  <body>
+  	<div id="content"></div>
+  	<script>
+  		sap.ui.getCore().attachInit(function () {
+  			let button = new sap.m.Button({
+  				text: 'Send',
+  				icon: 'sap-icon://font-awesome-solid/paper-plane'
+  			});
+  			button.placeAt('content');
+  		});
+  	</script>
+  </body>
+  </html>
+  ```
+
+- **Node Module**
+
+  ```js
+  import FontAwesomeOpenUI5 from 'font-awesome-openui5';
+
+  // Load icons synchronously.
+  FontAwesomeOpenUI5.loadIcons();
+
+  // Load icons asynchronously.
+  FontAwesomeOpenUI5.loadIconsAsync();
+  ```
+
+### Icon URI
+
+Each Font Awesome icons styles have its own collection name in [IconPool](https://openui5.hana.ondemand.com/#/api/sap.ui.core.IconPool).
+
+- **[Solid](https://fontawesome.com/icons?d=gallery&s=solid&m=free):** `font-awesome-solid`
+- **[Regular](https://fontawesome.com/icons?d=gallery&s=regular&m=free):** `font-awesome-regular`
+- **[Brands](https://fontawesome.com/icons?d=gallery&s=brands&m=free):** `font-awesome-brands`
 
 **Example:**
 
-```javascript
+```js
 let button = new sap.m.Button({
-	text: 'Send'
-	icon: 'sap-icon://font-awesome/paper-plane'
+	text: 'Send',
+	icon: 'sap-icon://font-awesome-solid/paper-plane'
 });
 ```
-
-## API
-
-### FontAwesomeOpenUI5.loadIcons(icons, [includeAliases])
-
-Add icons into OpenUI5.
-
-#### icons
-Type: `Array.<Icon>`
-
-Icons source.
-
-<details>
-<summary><code>Icon</code></summary>
-
-```json
-{
-	"id": "times",
-	"unicode": "f00d",
-	"aliases": [
-		"remove",
-		"close"
-	]
-}
-```
-
-- `id`  
-  Type: `String`
-
-  Icon **id**.
-- `unicode`  
-  Type: `String`
-
-  Icon **unicode** character.
-- `aliases`  
-  Type: `Array.<String>`
-
-  Icon **aliases**.  
-  > If icon has no **aliases**, it won't has `aliases` field.
-
-</details>
-
-#### includeAliases
-Type: `Boolean`  
-Default: `true`
-
-Include icons **aliases**.
-
-### FontAwesomeOpenUI5.loadIconsAsync(icons, [includeAliases])
-Return: [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-
-Add icons into OpenUI5 asynchronously.
-
-#### icons
-
-> Same as `FontAwesomeOpenUI5.loadIcons`'s `icons`.
-
-#### includeAliases
-
-> Same as `FontAwesomeOpenUI5.loadIcons`'s `includeAliases`.

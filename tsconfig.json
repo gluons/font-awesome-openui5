@@ -1,11 +1,16 @@
 {
 	"compilerOptions": {
-		"declaration": true,
 		"module": "commonjs",
 		"moduleResolution": "node",
-		"outDir": "./common",
-		"sourceMap": true,
-		"target": "es6"
+		"target": "es5",
+		"lib": [
+			"dom",
+			"es2015"
+		],
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"outDir": "dist",
+		"sourceMap": true
 	},
 	"include": [
 		"src/**/*"

@@ -1,11 +1,5 @@
-
-# Created by https://www.gitignore.io/api/node,bower,visualstudiocode,linux,windows
-
-### Bower ###
-bower_components
-.bower-cache
-.bower-registry
-.bower-tmp
+﻿
+# Created by https://www.gitignore.io/api/node,linux,windows
 
 ### Linux ###
 *~
@@ -49,6 +43,7 @@ coverage
 .grunt
 
 # Bower dependency directory (https://bower.io/)
+bower_components
 
 # node-waf configuration
 .lock-wscript
@@ -82,13 +77,6 @@ typings/
 .env
 
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -110,4 +98,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,bower,visualstudiocode,linux,windows
+
+# End of https://www.gitignore.io/api/node,linux,windows
+
+# Dist
+dist/
