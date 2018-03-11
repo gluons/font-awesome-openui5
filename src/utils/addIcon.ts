@@ -1,4 +1,5 @@
-const faFontFamily = 'Font Awesome 5 Free';
+const faFreeFontFamily = 'Font Awesome 5 Free';
+const faBrandsFontFamily = 'Font Awesome 5 Brands';
 
 export type FontAwesomeStyle = 'solid' | 'regular' | 'brands';
 
@@ -15,7 +16,7 @@ export default function addIcon(iconName: string, unicode: string, style: FontAw
 		iconName,
 		`font-awesome-${style}`,
 		{
-			fontFamily: faFontFamily,
+			fontFamily: (style === 'brands') ? faBrandsFontFamily : faFreeFontFamily,
 			content: unicode,
 			overWrite: true
 		}
