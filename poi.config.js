@@ -1,5 +1,6 @@
 module.exports = {
 	entry: './src/main.js',
+	removeDist: true,
 	html: {
 		title: 'Font Awesome icons for OpenUI5',
 		description: 'Provides Font Awesome icons for using in OpenUI5.'
