@@ -5,7 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><%= htmlWebpackPlugin.options.title %></title>
+	<meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://font-awesome-openui5.surge.sh/">
 	<% if (htmlWebpackPlugin.options.description) { %>
+	<meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>">
 	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
 	<% } %>
 	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
