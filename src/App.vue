@@ -22,10 +22,14 @@
 			MenuItem(name='demo-regular') Regular Icons
 			MenuItem(name='demo-brands') Brands Icons
 	router-view
+	footer
+		p Made with #[Icon(type='heart', size='30')] by #[BlankLink(url='https://github.com/gluons') Saran Tanpituckpong]
 </template>
 
 
 <script>
+import BlankLink from '@/components/BlankLink';
+
 const demoNameRegex = /^(demo)-([a-z]+)/;
 const demoPathRegex = /^\/(demo)\/([a-z]+)/;
 
@@ -57,6 +61,9 @@ function menuNameToPath(menuName) {
 
 export default {
 	name: 'App',
+	components: {
+		BlankLink
+	},
 	data() {
 		return {
 			currentMenuName: 'home'
@@ -91,6 +98,17 @@ export default {
 		@media screen and (max-width: 576px) {
 			font-size: 10px;
 		}
+	}
+}
+footer {
+	text-align: center;
+	margin-bottom: 1rem;
+
+	.ivu-icon {
+		vertical-align: middle;
+	}
+	.ivu-icon-heart {
+		color: red;
 	}
 }
 </style>
