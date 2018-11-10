@@ -3,6 +3,8 @@ import { BannerPlugin, Configuration } from 'webpack';
 import Stylish from 'webpack-stylish';
 import WebpackBar from 'webpackbar';
 
+import 'object.values/polyfill';
+
 const pkg = require('./package.json');
 
 const banner = `
