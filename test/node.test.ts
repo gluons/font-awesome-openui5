@@ -4,8 +4,6 @@ import { addIcon, hasIconPool, hasjQuery, hasOpenUI5, importIconPool } from '../
 
 /* tslint:disable:no-unused-expression */
 
-console.log(addIcon);
-
 describe('Font Awesome OpenUI5 - Node', () => {
 	describe('FontAwesomeOpenUI5 class', () => {
 		it(`should have 'loadIcons' method`, () => {

@@ -1,4 +1,3 @@
-/// <reference path='./chai-expect.d.ts' />
 /// <reference path='./karma-json.d.ts' />
 
 const iconCount = window.__json__.$get('test/icon-count.json');
