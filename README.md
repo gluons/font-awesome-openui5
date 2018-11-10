@@ -6,7 +6,7 @@
 [![Travis](https://img.shields.io/travis/gluons/font-awesome-openui5.svg?style=flat-square)](https://travis-ci.org/gluons/font-awesome-openui5)
 [![TSLint](https://img.shields.io/badge/TSLint-gluons-15757B.svg?style=flat-square)](https://github.com/gluons/tslint-config-gluons)
 
-Provides [Font Awesome](https://fontawesome.com/) icons for using in [OpenUI5](http://openui5.org/).
+Provides [Font Awesome](https://fontawesome.com/) **free** icons for using in [OpenUI5](http://openui5.org/).
 
 > Use icons source from [Font-Awesome-Icon-Chars](https://github.com/gluons/Font-Awesome-Icon-Chars).
 
