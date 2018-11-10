@@ -1,4 +1,6 @@
-import { hasIconPool, hasjQuery, hasOpenUI5 } from './index';
+import hasIconPool from './hasIconPool';
+import hasjQuery from './hasjQuery';
+import hasOpenUI5 from './hasOpenUI5';
 
 /**
  * Import `sap.ui.core.IconPool` if it hasn't been imported.
