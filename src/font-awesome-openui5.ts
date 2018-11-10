@@ -18,7 +18,7 @@ export default abstract class FontAwesomeOpenUI5 {
 	 * @static
 	 * @memberof FontAwesomeOpenUI5
 	 */
-	public static loadIcons(): void {
+	static loadIcons(): void {
 		importIconPool();
 
 		solid.forEach(icon => addIcon(icon.name, icon.unicode, 'solid'));
@@ -32,7 +32,7 @@ export default abstract class FontAwesomeOpenUI5 {
 	 * @returns
 	 * @memberof FontAwesomeOpenUI5
 	 */
-	public static loadIconsAsync() {
+	static loadIconsAsync() {
 		return new Promise((resolve, reject) => {
 			setTimeout(
 				() => {
