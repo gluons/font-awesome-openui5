@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "prebuild": "rimraf ./dist/*",
-    "build:node": "tsc -d -p .",
-    "build:web": "webpack --mode production",
+    "build:node": "tsc",
+    "build:web": "webpack",
     "build": "run-p build:*",
     "lint": "tslint -p .",
     "pretest": "npm run build",
@@ -45,6 +45,7 @@
     "@types/mocha": "^5.2.5",
     "@types/node": "8",
     "@types/openui5": "^1.40.2",
+    "@types/webpack": "^4.4.18",
     "chai": "^4.2.0",
     "karma": "^2.0.0",
     "karma-chai": "^0.1.0",
@@ -63,6 +64,7 @@
     "typescript": "^3.1.6",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
-    "webpack-stylish": "^0.1.8"
+    "webpack-stylish": "^0.1.8",
+    "webpackbar": "^3.1.2"
   }
 }
