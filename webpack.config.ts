@@ -3,7 +3,7 @@ import { BannerPlugin, Configuration } from 'webpack';
 import Stylish from 'webpack-stylish';
 import WebpackBar from 'webpackbar';
 
-import 'object.values/polyfill';
+require('object.values/shim')();
 
 const pkg = require('./package.json');
 
