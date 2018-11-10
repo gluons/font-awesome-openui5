@@ -1,7 +1,15 @@
 import { resolve } from 'path';
-import { Configuration } from 'webpack';
+import { BannerPlugin, Configuration } from 'webpack';
 import Stylish from 'webpack-stylish';
 import WebpackBar from 'webpackbar';
+
+const pkg = require('./package.json');
+
+const banner = `
+Font Awesome icons for OpenUI5 v${pkg.version}
+Created by Saran Tanpituckpong
+Released under the MIT License
+`.trim();
 
 export default {
 	mode: 'production',
@@ -28,6 +36,7 @@ export default {
 		extensions: ['.wasm', '.mjs', '.ts', '.js', '.json'] // Include .ts
 	},
 	plugins: [
+		new BannerPlugin(banner),
 		new WebpackBar(),
 		new Stylish()
 	],
