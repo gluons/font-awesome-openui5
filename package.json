@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
+    "@types/lodash.isnil": "^4.0.4",
     "@types/mocha": "^5.2.5",
     "@types/node": "8",
     "@types/openui5": "^1.40.2",
