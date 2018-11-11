@@ -9,25 +9,23 @@
 				src='https://nodei.co/npm/font-awesome-openui5.png?downloads=true&downloadRank=true&stars=true'
 				alt='npm'
 			)
-		highlight-code npm install font-awesome-openui5
+		highlight-code(lang='sh') npm install font-awesome-openui5
 		.gap
 		p: strong Via #[BlankLink(url='https://yarnpkg.com/') Yarn]:
-		highlight-code yarn add font-awesome-openui5
+		highlight-code(lang='sh') yarn add font-awesome-openui5
 	.section
 		h1 Usage
 		ul.usage
 			li
 				h3 In browser
-				p You can use this via CDN such as #[BlankLink(url='https://unpkg.com/') unpkg] or #[BlankLink(url='https://www.jsdelivr.com/') jsDelivr].
+				p You can use this via CDN such as #[BlankLink(url='https://www.jsdelivr.com/') jsDelivr] or #[BlankLink(url='https://unpkg.com/') unpkg].
 				ul.with-code
-					li #[strong unpkg:]
-						|
-						|
-						highlight-code(inline) https://unpkg.com/font-awesome-openui5@^3
-					li #[strong jsDelivr:]
-						|
-						|
+					li
+						strong.no-sel jsDelivr:
 						highlight-code(inline) https://cdn.jsdelivr.net/npm/font-awesome-openui5@^3
+					li
+						strong.no-sel unpkg:
+						highlight-code(inline) https://unpkg.com/font-awesome-openui5@^3
 				highlight-code(lang='html', :code='usageCode')
 			li
 				h3 Node Module
@@ -44,19 +42,13 @@
 		p Each Font Awesome icons styles have its own collection name in #[BlankLink(url='https://openui5.hana.ondemand.com/#/api/sap.ui.core.IconPool') IconPool].
 		ul.with-code
 			li
-				strong #[BlankLink(url='https://fontawesome.com/icons?d=gallery&s=solid&m=free') Solid]:
-				|
-				|
+				strong.no-sel #[BlankLink(url='https://fontawesome.com/icons?d=gallery&s=solid&m=free') Solid]:
 				highlight-code(inline) font-awesome-solid
 			li
-				strong #[BlankLink(url='https://fontawesome.com/icons?d=gallery&s=regular&m=free') Regular]:
-				|
-				|
+				strong.no-sel #[BlankLink(url='https://fontawesome.com/icons?d=gallery&s=regular&m=free') Regular]:
 				highlight-code(inline) font-awesome-regular
 			li
-				strong #[BlankLink(url='https://fontawesome.com/icons?d=gallery&s=brands&m=free') Brands]:
-				|
-				|
+				strong.no-sel #[BlankLink(url='https://fontawesome.com/icons?d=gallery&s=brands&m=free') Brands]:
 				highlight-code(inline) font-awesome-brands
 		p: strong Example:
 		highlight-code(lang='javascript').
@@ -79,16 +71,11 @@
 
 
 <script>
-import BlankLink from '@/components/BlankLink';
-
 import usageCode from '@/code/usage.txt';
 import ui5Buttons from '@/code/ui5-buttons.txt';
 
 export default {
 	name: 'Start',
-	components: {
-		BlankLink
-	},
 	data() {
 		return {
 			usageCode,
@@ -101,6 +88,10 @@ export default {
 <style lang="scss" scoped>
 ul.with-code li {
 	line-height: 2.5em;
+
+	strong {
+		margin-right: .3rem;
+	}
 }
 .gap {
 	margin: 2rem 0;

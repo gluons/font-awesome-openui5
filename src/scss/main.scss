@@ -44,6 +44,9 @@ body {
 		}
 	}
 }
+.no-sel {
+	user-select: none;
+}
 img {
 	max-width: 100%;
 }

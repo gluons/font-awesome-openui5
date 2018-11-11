@@ -1,5 +1,5 @@
 <template lang="pug">
-.container.demo#demo-solid
+.container.demo#demo
 	#demo-container
 	.pager
 		Page(
@@ -19,7 +19,7 @@ import FontAwesomeOpenUI5 from 'font-awesome-openui5';
 import faIconChars from 'font-awesome-icon-chars';
 
 export default {
-	name: 'DemoSolid',
+	name: 'Demo',
 	props: {
 		/**
 		 * Font Awesome 5 style
@@ -76,18 +76,19 @@ export default {
 		renderControls() {
 			this.destroyControls();
 
-			let style = this.faStyle; // Font Awesome 5 style
-			let icons = faIconChars[style];
-			let pageSize = this.pageSize;
-			let currentPage = this.currentPage;
+			const style = this.faStyle; // Font Awesome 5 style
+			const icons = faIconChars[style];
+			const pageSize = this.pageSize;
+			const currentPage = this.currentPage;
 
 			FontAwesomeOpenUI5.loadIcons();
-			let buttons = [];
-			let startIndex = ((pageSize * currentPage) - pageSize);
-			let endBoundary = (pageSize * currentPage);
+
+			const buttons = [];
+			const startIndex = ((pageSize * currentPage) - pageSize);
+			const endBoundary = (pageSize * currentPage);
 			for (let i = startIndex; (i < icons.length) && (i < endBoundary); i++) {
-				let { name } = icons[i];
-				let button = new sap.m.Button({
+				const { name } = icons[i];
+				const button = new sap.m.Button({
 					text: name,
 					icon: `sap-icon://font-awesome-${style}/${name}`,
 					press() {

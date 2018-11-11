@@ -1,9 +1,9 @@
-import VueRouter from 'vue-router';
+import Vue from 'vue';
+import Router from 'vue-router';
 
 import Home from './views/Home';
-import Start from './views/Start';
-import API from './views/API';
-import Demo from './views/Demo';
+
+Vue.use(Router);
 
 const routes = [
 	{
@@ -12,22 +12,20 @@ const routes = [
 	},
 	{
 		path: '/start',
-		component: Start
+		component: () => import(/* webpackChunkName: "start" */ './views/Start')
 	},
 	{
 		path: '/api',
-		component: API
+		component: () => import(/* webpackChunkName: "api" */ './views/API')
 	},
 	{
 		path: '/demo/:faStyle',
-		component: Demo,
+		component: () => import(/* webpackChunkName: "demo" */ './views/Demo'),
 		props: true
 	}
 ];
 
-const router = new VueRouter({
+export default new Router({
 	routes,
 	mode: 'history'
 });
-
-export default router;

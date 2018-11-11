@@ -2,31 +2,26 @@
 #home
 	.hero
 		h1 Font Awesome icons for OpenUI5
-		h2.subtitle Provides #[BlankLink(url='https://fontawesome.com/') Font Awesome] icons for using in #[BlankLink(url='http://openui5.org/') OpenUI5].
+		h2.subtitle Provides #[BlankLink(url='https://fontawesome.com/') Font Awesome] icons for using in #[BlankLink(url='https://openui5.org/') OpenUI5].
 		.buttons
 			Button(
 				type='primary'
 				size='large'
 				shape='circle'
-				icon='play'
+				icon='md-play'
 				@click='getStarted'
 			) Get started
 			Button(
 				size='large'
 				shape='circle'
-				icon='social-github'
+				icon='logo-github'
 				@click='openGitHub'
 			) View on GitHub
 </template>
 
 <script>
-import BlankLink from '@/components/BlankLink';
-
 export default {
 	name: 'Home',
-	components: {
-		BlankLink
-	},
 	methods: {
 		getStarted() {
 			this.$router.push('/start');

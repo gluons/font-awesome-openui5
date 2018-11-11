@@ -1,19 +1,26 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
 import VueHighlightJS from 'vue-highlight.js';
-import iView from 'iview';
-import locale from 'iview/dist/locale/en-US';
 
 import router from './router';
 import App from './App';
 
-import 'iview/dist/styles/iview.css';
+import './plugins/iview';
+
 import 'highlight.js/styles/atom-one-dark.css';
 import './scss/main.scss';
 
-Vue.use(VueRouter);
+Vue.config.productionTip = false;
+
 Vue.use(VueHighlightJS);
-Vue.use(iView, { locale });
+
+// Register global components
+const requireComponent = require.context('./components', false, /\.vue$/);
+requireComponent.keys().forEach(fileName => {
+	const componentConfig = requireComponent(fileName);
+	const componentName = fileName.replace(/^\.\/(.*)\.\w+$/, '$1');
+
+	Vue.component(componentName, componentConfig.default || componentConfig);
+});
 
 new Vue({
 	el: '#app',
