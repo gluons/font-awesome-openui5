@@ -71,16 +71,11 @@
 
 
 <script>
-import BlankLink from '@/components/BlankLink';
-
 import usageCode from '@/code/usage.txt';
 import ui5Buttons from '@/code/ui5-buttons.txt';
 
 export default {
 	name: 'Start',
-	components: {
-		BlankLink
-	},
 	data() {
 		return {
 			usageCode,

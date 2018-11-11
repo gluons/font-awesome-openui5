@@ -20,13 +20,8 @@
 </template>
 
 <script>
-import BlankLink from '@/components/BlankLink';
-
 export default {
 	name: 'Home',
-	components: {
-		BlankLink
-	},
 	methods: {
 		getStarted() {
 			this.$router.push('/start');

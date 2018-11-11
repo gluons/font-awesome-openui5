@@ -28,8 +28,6 @@
 
 
 <script>
-import BlankLink from '@/components/BlankLink';
-
 const demoNameRegex = /^(demo)-([a-z]+)/;
 const demoPathRegex = /^\/(demo)\/([a-z]+)/;
 
@@ -61,9 +59,6 @@ function menuNameToPath(menuName) {
 
 export default {
 	name: 'App',
-	components: {
-		BlankLink
-	},
 	data() {
 		return {
 			currentMenuName: 'home'

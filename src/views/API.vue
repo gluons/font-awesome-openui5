@@ -17,13 +17,8 @@
 </template>
 
 <script>
-import BlankLink from '@/components/BlankLink';
-
 export default {
-	name: 'API',
-	components: {
-		BlankLink
-	}
+	name: 'API'
 };
 </script>
 

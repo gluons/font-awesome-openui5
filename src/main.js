@@ -13,6 +13,15 @@ Vue.config.productionTip = false;
 
 Vue.use(VueHighlightJS);
 
+// Register global components
+const requireComponent = require.context('./components', false, /\.vue$/);
+requireComponent.keys().forEach(fileName => {
+	const componentConfig = requireComponent(fileName);
+	const componentName = fileName.replace(/^\.\/(.*)\.\w+$/, '$1');
+
+	Vue.component(componentName, componentConfig.default || componentConfig);
+});
+
 new Vue({
 	el: '#app',
 	render: h => h(App),
