@@ -1,9 +1,12 @@
-import VueRouter from 'vue-router';
+import Vue from 'vue';
+import Router from 'vue-router';
 
 import Home from './views/Home';
 import Start from './views/Start';
 import API from './views/API';
 import Demo from './views/Demo';
+
+Vue.use(Router);
 
 const routes = [
 	{
@@ -25,9 +28,7 @@ const routes = [
 	}
 ];
 
-const router = new VueRouter({
+export default new Router({
 	routes,
 	mode: 'history'
 });
-
-export default router;
