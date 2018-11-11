@@ -22,10 +22,10 @@
 				ul.with-code
 					li
 						strong.no-sel jsDelivr:
-						highlight-code(inline) https://cdn.jsdelivr.net/npm/font-awesome-openui5@^3
+						highlight-code(inline) https://cdn.jsdelivr.net/npm/font-awesome-openui5
 					li
 						strong.no-sel unpkg:
-						highlight-code(inline) https://unpkg.com/font-awesome-openui5@^3
+						highlight-code(inline) https://unpkg.com/font-awesome-openui5
 				highlight-code(lang='html', :code='usageCode')
 			li
 				h3 Node Module
