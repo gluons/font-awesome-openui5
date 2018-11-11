@@ -23,7 +23,7 @@
     "font-awesome-icon-chars": "^2.0.0",
     "font-awesome-openui5": "^3.0.1",
     "highlight.js": "^9.12.0",
-    "iview": "^2.10.1",
+    "iview": "^3.1.5",
     "vue": "^2.5.17",
     "vue-highlight.js": "^2.2.0",
     "vue-router": "^3.0.1"
@@ -42,6 +42,7 @@
     "prettier": "^1.15.2",
     "raw-loader": "^0.5.1",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-iview": "^1.0.6",
     "vue-cli-plugin-pug": "^1.0.7",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.25.1"
