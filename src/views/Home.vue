@@ -2,7 +2,7 @@
 #home
 	.hero
 		h1 Font Awesome icons for OpenUI5
-		h2.subtitle Provides #[BlankLink(url='https://fontawesome.com/') Font Awesome] icons for using in #[BlankLink(url='http://openui5.org/') OpenUI5].
+		h2.subtitle Provides #[BlankLink(url='https://fontawesome.com/') Font Awesome] icons for using in #[BlankLink(url='https://openui5.org/') OpenUI5].
 		.buttons
 			Button(
 				type='primary'
