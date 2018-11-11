@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prebuild": "rimraf ./dist/*",
     "build:node": "tsc",
     "build:web": "webpack",
