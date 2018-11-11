@@ -19,8 +19,8 @@
   },
   "homepage": "https://gluons.github.io/font-awesome-openui5/",
   "dependencies": {
-    "font-awesome-icon-chars": "^2.0.0",
-    "font-awesome-openui5": "^3.0.1",
+    "font-awesome-icon-chars": "^2.4.0",
+    "font-awesome-openui5": "^3.1.0",
     "highlight.js": "^9.12.0",
     "iview": "^3.1.5",
     "vue": "^2.5.17",

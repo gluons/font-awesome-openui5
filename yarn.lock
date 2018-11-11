@@ -3675,17 +3675,17 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "=3.1.0"
 
-font-awesome-icon-chars@^2.0.0:
+font-awesome-icon-chars@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/font-awesome-icon-chars/-/font-awesome-icon-chars-2.4.0.tgz#9115226b330db75972a315a6f65a61334a99cfa2"
   integrity sha512-bA5FiACVDeZGhQtARIzSrZhnTCv6M20MDUPCVfwdn2PacGDwL4v0J4Pth1SAKcBIxbIAGgkm/ZW0m5D03/4S1A==
 
-font-awesome-openui5@^3.0.1:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/font-awesome-openui5/-/font-awesome-openui5-3.0.2.tgz#667eae31a552cbb08fae74a63a14bb2b26f58258"
-  integrity sha1-Zn6uMaVSy7CPrnSmOhS7Kyb1glg=
+font-awesome-openui5@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/font-awesome-openui5/-/font-awesome-openui5-3.1.0.tgz#edd257422f7ea8b73fbe3d0f4bc4fc8d1e332788"
+  integrity sha512-nA0hx8a5L4ThYDrRO+veiXACNyrugVPQwCt5qYcsAPZVSqQIy3U1w0B5MObcBwNqqqHsCj9h+D2+i27OK1+99A==
   dependencies:
-    font-awesome-icon-chars "^2.0.0"
+    font-awesome-icon-chars "^2.4.0"
     lodash.isnil "^4.0.0"
 
 for-in@^0.1.3:
