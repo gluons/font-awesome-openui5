@@ -6,24 +6,24 @@
 		@on-select='onMenuSelect'
 	)
 		MenuItem(name='home')
-			Icon(type='home')
+			Icon(type='md-home' size='20')
 			| Home
 		MenuItem(name='start')
-			Icon(type='play')
+			Icon(type='md-play' size='20')
 			| Get started
 		MenuItem(name='api')
-			Icon(type='document-text')
+			Icon(type='md-document' size='20')
 			| API
 		Submenu(name='demo')
 			template(slot='title')
-				Icon(type='film-marker')
+				Icon(type='md-desktop' size='20')
 				| Demo
 			MenuItem(name='demo-solid') Solid Icons
 			MenuItem(name='demo-regular') Regular Icons
 			MenuItem(name='demo-brands') Brands Icons
 	router-view
 	footer
-		p Made with #[Icon(type='heart', size='30')] by #[BlankLink(url='https://github.com/gluons') Saran Tanpituckpong]
+		p Made with #[Icon(type='md-heart' size='30' color='red')] by #[BlankLink(url='https://github.com/gluons') Saran Tanpituckpong]
 </template>
 
 
