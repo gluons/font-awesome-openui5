@@ -18,10 +18,10 @@
 	>
 	</script>
 
-	<!-- Via unpkg -->
-	<script src="https://unpkg.com/font-awesome-openui5@^3"></script>
-	<!-- Or via jsDelivr -->
+	<!-- Via jsDelivr -->
 	<script src="https://cdn.jsdelivr.net/npm/font-awesome-openui5@^3"></script>
+	<!-- Or Via unpkg -->
+	<script src="https://unpkg.com/font-awesome-openui5@^3"></script>
 </head>
 <body>
 	<div id="content"></div>
