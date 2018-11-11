@@ -28,4 +28,4 @@ yarn add font-awesome-openui5
 
 ## Usage
 
-For full documentation & demo, see https://font-awesome-openui5.surge.sh/
+For full documentation & demo, see https://font-awesome-openui5.netlify.com/
